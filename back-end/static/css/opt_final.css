@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+body {
+            font-family: 'Handlee', cursive;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Para alinhar o título e os cards */
+        }
+
+        .container {
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Espaçamento entre os cards */
+        }
+
+        .header-title {
+            position: absolute;
+            top: -20px;
+            background-color: #fff;
+            padding: 0 10px;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: center;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card {
+            border: 2px solid #333;
+            border-radius: 10px;
+            min-height: 150px; /* Maior para esta página */
+            width: 80%; /* Ocupa mais largura */
+            max-width: 300px; /* Limite de largura */
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem; /* Fonte maior */
+            font-weight: bold;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #f8f8f8;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-message {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .back-button-final {
+            background-color: #60a5fa; /* Azul mais claro */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+            border: 2px solid #333;
+        }
+        
+        .back-button-final:hover {
+            background-color: #3b82f6;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+/* -- Botão de Voltar Moderno -- */
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #60a5fa;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #60a5fa;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+    background-color: #60a5fa;
+    color: white;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.back-button:active {
+    transform: translateX(-3px) scale(0.98);
+}
+
+.back-arrow {
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-2px);
+}
+
+.back-text {
+    font-family: 'Handlee', cursive;
+    font-weight: 500;
+}
+
+/* -- Responsividade para o botão -- */
+@media (max-width: 768px) {
+    .back-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .back-text {
+        display: none;
+    }
+    
+    .back-button:hover .back-arrow {
+        transform: translateX(-1px);
+    }
+}

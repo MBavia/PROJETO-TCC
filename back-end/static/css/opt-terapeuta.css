@@ -1,0 +1,280 @@
+/* -- Importação de Fontes -- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+/* -- Variáveis de Cores e Sombra -- */
+:root {
+    --text-dark: #000000;
+    --text-light: #64748b;
+    --bg-main: #ffffff;
+    --card-bg: #ffffff;
+    --accent-color-1: #5d93e1;
+    --accent-color-2: #63c0a4;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-color: #e2e8f0;
+}
+
+
+/* -- Animações -- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* -- Estilos Globais -- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    animation: fadeIn 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* -- Container Principal -- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    animation: slideInUp 0.8s ease-out;
+}
+
+/* -- Título Principal -- */
+.main-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+    margin-bottom: 0.5rem;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    text-align: left;
+    margin-bottom: 2rem;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* -- Grid de Terapeutas -- */
+.terapist-grid {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    animation: slideInUp 0.8s ease-out 0.4s both;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* -- Cartões dos Terapeutas -- */
+.terapist-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    flex: 1;
+    max-width: 250px;
+}
+
+.terapist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.terapist-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.terapist-specialty {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-color-1);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.terapist-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-light);
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* -- Estilização da Imagem -- */
+.terapist-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color-1);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.terapist-card:hover .terapist-avatar {
+    transform: scale(1.05);
+    border-color: var(--accent-color-2);
+}
+
+/* -- Botão de Voltar -- */
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.70rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--accent-color-1);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--accent-color-1);
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-subtle);
+    backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+    background-color: var(--accent-color-1);
+    color: white;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(93, 147, 225, 0.3);
+}
+
+.back-button:active {
+    transform: translateX(-3px) scale(0.98);
+}
+
+.back-arrow {
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-2px);
+}
+
+.back-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* -- Responsividade para o botão -- */
+@media (max-width: 768px) {
+    .back-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .back-text {
+        display: none;
+    }
+    
+    .back-button:hover .back-arrow {
+        transform: translateX(-1px);
+    }
+}
+
+/* -- Responsividade -- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .terapist-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 400px;
+        align-items: center;
+    }
+
+    .terapist-card {
+        min-height: 250px;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .terapist-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .terapist-name {
+        font-size: 1.3rem;
+    }
+
+    .terapist-specialty {
+        font-size: 0.9rem;
+    }
+
+    .terapist-description {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat com Terapeuta | Psico IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="flex w-full max-w-6xl h-[90vh] bg-white shadow-xl rounded-lg overflow-hidden">
+
+        <aside class="w-1/4 bg-gray-50 border-r border-gray-200 p-6 flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">PsicoIA</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                        <img id="terapeuta-avatar" src="/static/images/default.png" alt="Avatar do Terapeuta" class="w-10 h-10 rounded-full object-cover border-2 border-green-500">
+                        <div>
+                            <p class="text-sm font-semibold text-gray-800" id="chat-title">Carregando Terapeuta...</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span id="connection-status-dot" class="w-2 h-2 rounded-full bg-gray-400 mr-1"></span>
+                                <span id="connection-text">Conexão</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="/questionario" class="block w-full text-center py-2 px-4 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 transition duration-150">
+                        Roda de Sentimentos
+                    </a>
+                </div>
+            </div>
+            
+            <footer class="text-xs text-gray-400">
+                &copy; 2024 PsicoIA. Todos os direitos reservados.
+            </footer>
+        </aside>
+
+        <main class="flex flex-col w-3/4">
+            
+            <header class="p-4 bg-white border-b border-gray-200 shadow-sm flex items-center">
+                <img id="terapeuta-avatar-header" src="/static/images/default.png" alt="Avatar do Terapeuta" class="w-8 h-8 rounded-full object-cover mr-3">
+                <h1 class="text-lg font-semibold text-gray-800" id="chat-title-main">Carregando Sessão...</h1>
+            </header>
+
+            <div id="chat-box" class="flex-1 p-6 space-y-4 overflow-y-auto custom-scrollbar">
+                <div class="flex justify-center my-4">
+                    <div class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm">
+                        Bem-vindo(a)! Escolha um terapeuta na tela anterior para começar a conversa.
+                    </div>
+                </div>
+            </div>
+
+            <footer class="p-4 bg-gray-50 border-t border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <input 
+                        type="text" 
+                        id="message-input" 
+                        placeholder="Digite sua mensagem..." 
+                        class="flex-1 p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 disabled:bg-gray-200"
+                        disabled
+                    >
+                    <button 
+                        id="send-button" 
+                        class="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-150 disabled:bg-blue-300"
+                        disabled
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 transform rotate-90">
+                            <path d="M3.478 2.405a.75.75 0 0 0-.926.94l2.432 7.917H3.75a.75.75 0 0 0-.58.122l-2.557 1.54c-.676.427-.602 1.5.755 1.685A10.125 10.125 0 0 0 22.5 12c0-.827-.194-1.637-.56-2.348l-2.432-7.917a.75.75 0 0 0-.926-.94s2.432 7.917 2.432 7.917H3.75a.75.75 0 0 0-.58.122l-2.557 1.54c-.676.427-.602 1.5.755 1.685A10.125 10.125 0 0 0 22.5 12c0-.827-.194-1.637-.56-2.348L3.478 2.405Z" />
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* gray-300 */
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* gray-400 */
+        }
+    </style>
+</body>
+</html>

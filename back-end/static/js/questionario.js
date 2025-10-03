@@ -1,0 +1,476 @@
+// Objeto unificado para todas as emoções e subemoções
+const emotionsData = {
+    "Raiva": {
+        label: "Raiva",
+        icon: "😠",
+        phrases: { titulo: "Raiva, uau! Isso te deixou irritado 😡", subtitulo: "O que exatamente essa raiva está te fazendo sentir?" },
+        sub: ["Frustração", "Inveja", "Irritação", "Exasperado", "Fúria"]
+    },
+    "Frustração": {
+        label: "Frustração",
+        phrases: { titulo: "Frustração, que coisa chata! 😤", subtitulo: "O que exatamente essa frustração está te fazendo sentir?" },
+        sub: ["Agridido", "Indignado"]
+    },
+    "Inveja": {
+        label: "Inveja",
+        phrases: { titulo: "Inveja, isso está te incomodando, né? 😒", subtitulo: "O que essa inveja está te fazendo sentir?" },
+        sub: ["Ciumento", "Rancoroso"]
+    },
+    "Irritação": {
+        label: "Irritação",
+        phrases: { titulo: "Irritação, que desconforto! 😠", subtitulo: "O que exatamente essa irritação provoca em você?" },
+        sub: ["Aborrecido", "Crítico", "Zangado"]
+    },
+    "Exasperado": {
+        label: "Exasperado",
+        phrases: { titulo: "Exasperado, parece que tudo está demais! 😩", subtitulo: "Como isso está te fazendo se sentir agora?" },
+        sub: ["Irritado (Sub)", "Amargurado"] // "Irritado (Sub)" para evitar conflito com "Irritação" principal
+    },
+    "Fúria": {
+        label: "Fúria",
+        phrases: { titulo: "Fúria, está queimando aí dentro, né? 😡", subtitulo: "O que essa fúria está te causando nesse momento?" },
+        sub: ["Furioso", "Agressivo"]
+    },
+    "Tristeza": {
+        label: "Tristeza",
+        icon: "😢",
+        phrases: { titulo: "Tristeza, que pena! 😢", subtitulo: "O que essa tristeza está te fazendo sentir?" },
+        sub: ["Sofrimento", "Vergonha", "Desapontamento", "Remorso", "Desespero (Sub)", "Depressão"] // "Desespero (Sub)" para evitar conflito
+    },
+    "Sofrimento": {
+        label: "Sofrimento",
+        phrases: { titulo: "Sofrimento, sinto muito por isso. 😢", subtitulo: "O que exatamente esse sofrimento faz você sentir?" },
+        sub: ["Angústia", "Agonia"]
+    },
+    "Vergonha": {
+        label: "Vergonha",
+        phrases: { titulo: "Vergonha, que sensação difícil... 😳", subtitulo: "Como essa vergonha está te afetando nesse momento?" },
+        sub: ["Culpa", "Humilhação"]
+    },
+    "Desapontamento": {
+        label: "Desapontamento",
+        phrases: { titulo: "Desapontamento, poxa... que pena. 😔", subtitulo: "E como esse desapontamento faz você se sentir agora?" },
+        sub: ["Desanimado", "Desiludido"]
+    },
+    "Remorso": {
+        label: "Remorso",
+        phrases: { titulo: "Remorso, quando o passado pesa... 😞", subtitulo: "O que esse remorso faz você sentir agora?" },
+        sub: ["Arrependimento", "Culpa Profunda"]
+    },
+    "Desespero (Sub)": { // Chave ajustada
+        label: "Desespero",
+        phrases: { titulo: "Desespero, quando tudo parece perdido... 😩", subtitulo: "Como esse desespero está te impactando nesse momento?" },
+        sub: ["Impotência", "Desesperança"]
+    },
+    "Depressão": {
+        label: "Depressão",
+        phrases: { titulo: "Depressão, parece que está pesado demais... 😞", subtitulo: "E como essa depressão faz você se sentir?" },
+        sub: ["Vazio", "Pesado"]
+    },
+    "Surpresa": {
+        label: "Surpresa",
+        icon: "😲",
+        phrases: { titulo: "Surpresa, uau! Isso foi inesperado 😲", subtitulo: "O que essa surpresa está te fazendo sentir?" },
+        sub: ["Estarrecido", "Confusão", "Atônito", "Chocado", "Perplexo (Sub)"] // "Perplexo (Sub)" para evitar conflito
+    },
+    "Estarrecido": {
+        label: "Estarrecido",
+        phrases: { titulo: "Estarrecido, que choque inesperado! 😱", subtitulo: "E como isso faz você se sentir agora?" },
+        sub: ["Surpreso (Sub)", "Descrente"] // "Surpreso (Sub)" para evitar conflito
+    },
+    "Confusão": {
+        label: "Confusão",
+        phrases: { titulo: "Confusão, tudo parece meio bagunçado, né? 🤯", subtitulo: "O que exatamente essa confusão faz você sentir?" },
+        sub: ["Confuso", "Perplexo (Sub2)"] // "Perplexo (Sub2)" para evitar conflito
+    },
+    "Atônito": {
+        label: "Atônito",
+        phrases: { titulo: "Atônito, sem palavras... 😳", subtitulo: "E como isso faz você se sentir nesse momento?" },
+        sub: ["Impressionado", "Aturdido"]
+    },
+    "Chocado": {
+        label: "Chocado",
+        phrases: { titulo: "Chocado, isso te pegou de surpresa! 😮", subtitulo: "O que exatamente esse choque provoca em você?" },
+        sub: ["Abismado", "Enaltecido"]
+    },
+    "Perplexo (Sub)": { // Chave ajustada
+        label: "Perplexo",
+        phrases: { titulo: "Perplexo, difícil até de entender, né? 🤔", subtitulo: "E como essa perplexidade te faz se sentir agora?" },
+        sub: ["Intrigado", "Questionador"]
+    },
+    "Alegria": {
+        label: "Alegria",
+        icon: "😊",
+        phrases: { titulo: "Alegria, que coisa boa! 😄", subtitulo: "O que essa alegria está te fazendo sentir?" },
+        sub: ["Feliz", "Satisfeito", "Animado", "Orgulhoso", "Otimista", "Entusiasmado", "Extasiado", "Jovial"]
+    },
+    "Feliz": {
+        label: "Feliz",
+        phrases: { titulo: "Feliz, que coisa boa! 😄", subtitulo: "O que exatamente essa felicidade faz você sentir?" },
+        sub: ["Contente", "Jubiloso"]
+    },
+    "Satisfeito": {
+        label: "Satisfeito",
+        phrases: { titulo: "Satisfeito, que sensação gostosa! 😊", subtitulo: "O que essa satisfação está gerando em você?" },
+        sub: ["Grato", "Relaxado"]
+    },
+    "Animado": {
+        label: "Animado",
+        phrases: { titulo: "Animado, cheio de energia! 🤩", subtitulo: "Como esse ânimo está te fazendo se sentir?" },
+        sub: ["Estimulado", "Otimista (Sub)"] // "Otimista (Sub)" para evitar conflito
+    },
+    "Orgulhoso": {
+        label: "Orgulhoso",
+        phrases: { titulo: "Orgulhoso, parabéns por isso! 😎", subtitulo: "O que esse orgulho provoca em você agora?" },
+        sub: ["Vitorioso", "Realizado"]
+    },
+    "Otimista": {
+        label: "Otimista",
+        phrases: { titulo: "Otimista, cheio de esperança! ☀️", subtitulo: "O que essa esperança traz para você nesse momento?" },
+        sub: ["Esperançoso", "Inspirado"]
+    },
+    "Entusiasmado": {
+        label: "Entusiasmado",
+        phrases: { titulo: "Entusiasmado, energia lá em cima! 🔥", subtitulo: "E como esse entusiasmo faz você se sentir agora?" },
+        sub: ["Excitado", "Empolgado"]
+    },
+    "Extasiado": {
+        label: "Extasiado",
+        phrases: { titulo: "Extasiado, que momento incrível! ✨", subtitulo: "O que esse êxtase está te causando agora?" },
+        sub: ["Radiante", "Euforia"]
+    },
+    "Jovial": {
+        label: "Jovial",
+        phrases: { titulo: "Jovial, leveza e diversão no ar! 😎", subtitulo: "E como essa jovialidade faz você se sentir nesse momento?" },
+        sub: ["Divertido", "Brincalhão"]
+    },
+    "Amor": {
+        label: "Amor",
+        icon: "🥰",
+        phrases: { titulo: "Amor, que sensação maravilhosa! ❤️", subtitulo: "O que esse amor está te fazendo sentir?" },
+        sub: ["Amigável", "Confiança", "Paz", "Aceitação", "Cuidado"]
+    },
+    "Amigável": {
+        label: "Amigável",
+        phrases: { titulo: "Amigável, que conexão maravilhosa! 🤝", subtitulo: "O que essa amizade está gerando em você?" },
+        sub: ["Acolhedor", "Afetuoso"]
+    },
+    "Confiança": {
+        label: "Confiança",
+        phrases: { titulo: "Confiança, é tão bom se sentir seguro. 🔐", subtitulo: "E como essa confiança te faz se sentir?" },
+        sub: ["Seguro", "Confiante"]
+    },
+    "Paz": {
+        label: "Paz",
+        phrases: { titulo: "Paz, que tranquilidade maravilhosa. 🕊️", subtitulo: "E como essa paz se reflete em você agora?" },
+        sub: ["Calmo", "Sereno"]
+    },
+    "Aceitação": {
+        label: "Aceitação",
+        phrases: { titulo: "Aceitação, acolher faz bem. 💖", subtitulo: "O que essa aceitação está gerando dentro de você?" },
+        sub: ["Tolerante", "Compreensivo"]
+    },
+    "Cuidado": {
+        label: "Cuidado",
+        phrases: { titulo: "Cuidado, um gesto de amor e proteção. 💝", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
+        sub: ["Protetor", "Carinhoso"]
+    },
+    "Medo": {
+        label: "Medo",
+        icon: "😰",
+        phrases: { titulo: "Medo, opa... algo te deixou apreensivo 😨", subtitulo: "O que exatamente esse medo está te fazendo sentir?" },
+        sub: ["Ansiedade", "Inseguro", "Nervoso", "Assustado", "Aterrorizado", "Pânico (Sub)"] // "Pânico (Sub)" para evitar conflito
+    },
+    "Ansiedade": {
+        label: "Ansiedade",
+        phrases: { titulo: "Ansiedade, que aperto no peito... 😰", subtitulo: "O que exatamente essa ansiedade está te fazendo sentir?" },
+        sub: ["Apreensão", "Preocupação"]
+    },
+    "Inseguro": {
+        label: "Inseguro",
+        phrases: { titulo: "Inseguro, parece que tudo balança... 😟", subtitulo: "E como essa insegurança te afeta agora?" },
+        sub: ["Vulnerável", "Frágil"]
+    },
+    "Nervoso": {
+        label: "Nervoso",
+        phrases: { titulo: "Nervoso, difícil manter o controle, né? 😬", subtitulo: "O que esse nervosismo provoca em você?" },
+        sub: ["Irritável", "Tenso"]
+    },
+    "Assustado": {
+        label: "Assustado",
+        phrases: { titulo: "Assustado, algo te deixou alerta. 😨", subtitulo: "E como esse medo está te afetando nesse momento?" },
+        sub: ["Apavorado", "Assombrado"]
+    },
+    "Aterrorizado": {
+        label: "Aterrorizado",
+        phrases: { titulo: "Aterrorizado, isso parece muito intenso! 😱", subtitulo: "O que esse terror faz você sentir agora?" },
+        sub: ["Horrorizado", "Pavor"]
+    },
+    "Pânico (Sub)": { // Chave ajustada
+        label: "Pânico",
+        phrases: { titulo: "Pânico, parece que tudo fugiu do controle... 😵", subtitulo: "E como esse pânico está te impactando?" },
+        sub: ["Desespero (Sub2)", "Terror"] // "Desespero (Sub2)" para evitar conflito
+    },
+    // Emoções de Nível 3 (finais ou que não têm mais subníveis)
+    "Agridido": { label: "Agridido", finalPhrase: "Você se sente agredido" },
+    "Indignado": { label: "Indignado", finalPhrase: "Você está indignado" },
+    "Ciumento": { label: "Ciumento", finalPhrase: "Você se sente ciumento" },
+    "Rancoroso": { label: "Rancoroso", finalPhrase: "Você está rancoroso" },
+    "Aborrecido": { label: "Aborrecido", finalPhrase: "Você se sente aborrecido" },
+    "Crítico": { label: "Crítico", finalPhrase: "Você está crítico" },
+    "Zangado": { label: "Zangado", finalPhrase: "Você está zangado" },
+    "Irritado (Sub)": { label: "Irritado", finalPhrase: "Você se sente irritado" },
+    "Amargurado": { label: "Amargurado", finalPhrase: "Você está amargurado" },
+    "Furioso": { label: "Furioso", finalPhrase: "Você está furioso" },
+    "Agressivo": { label: "Agressivo", finalPhrase: "Você está agressivo" },
+    "Angústia": { label: "Angústia", finalPhrase: "Você sente angústia" },
+    "Agonia": { label: "Agonia", finalPhrase: "Você sente agonia" },
+    "Culpa": { label: "Culpa", finalPhrase: "Você se sente culpado" },
+    "Humilhação": { label: "Humilhação", finalPhrase: "Você se sente humilhado" },
+    "Desanimado": { label: "Desanimado", finalPhrase: "Você se sente desanimado" },
+    "Desiludido": { label: "Desiludido", finalPhrase: "Você está desiludido" },
+    "Arrependimento": { label: "Arrependimento", finalPhrase: "Você sente arrependimento" },
+    "Culpa Profunda": { label: "Culpa Profunda", finalPhrase: "Você sente uma culpa profunda" },
+    "Impotência": { label: "Impotência", finalPhrase: "Você sente impotência" },
+    "Desesperança": { label: "Desesperança", finalPhrase: "Você sente desesperança" },
+    "Vazio": { label: "Vazio", finalPhrase: "Você se sente vazio" },
+    "Pesado": { label: "Pesado", finalPhrase: "Você se sente pesado" },
+    "Surpreso (Sub)": { label: "Surpreso", finalPhrase: "Você está surpreso" },
+    "Descrente": { label: "Descrente", finalPhrase: "Você está descrente" },
+    "Confuso": { label: "Confuso", finalPhrase: "Você se sente confuso" },
+    "Perplexo (Sub2)": { label: "Perplexo", finalPhrase: "Você se sente perplexo" },
+    "Impressionado": { label: "Impressionado", finalPhrase: "Você está impressionado" },
+    "Aturdido": { label: "Aturdido", finalPhrase: "Você está aturdido" },
+    "Abismado": { label: "Abismado", finalPhrase: "Você está abismado" },
+    "Enaltecido": { label: "Enaltecido", finalPhrase: "Você se sente enaltecido" },
+    "Intrigado": { label: "Intrigado", finalPhrase: "Você está intrigado" },
+    "Questionador": { label: "Questionador", finalPhrase: "Você está questionador" },
+    "Contente": { label: "Contente", finalPhrase: "Você está contente" },
+    "Jubiloso": { label: "Jubiloso", finalPhrase: "Você está jubiloso" },
+    "Grato": { label: "Grato", finalPhrase: "Você se sente grato" },
+    "Relaxado": { label: "Relaxado", finalPhrase: "Você se sente relaxado" },
+    "Estimulado": { label: "Estimulado", finalPhrase: "Você está estimulado" },
+    "Otimista (Sub)": { label: "Otimista", finalPhrase: "Você está otimista" },
+    "Vitorioso": { label: "Vitorioso", finalPhrase: "Você se sente vitorioso" },
+    "Realizado": { label: "Realizado", finalPhrase: "Você se sente realizado" },
+    "Esperançoso": { label: "Esperançoso", finalPhrase: "Você se sente esperançoso" },
+    "Inspirado": { label: "Inspirado", finalPhrase: "Você está inspirado" },
+    "Excitado": { label: "Excitado", finalPhrase: "Você está excitado" },
+    "Empolgado": { label: "Empolgado", finalPhrase: "Você está empolgado" },
+    "Radiante": { label: "Radiante", finalPhrase: "Você está radiante" },
+    "Euforia": { label: "Euforia", finalPhrase: "Você está em euforia" },
+    "Divertido": { label: "Divertido", finalPhrase: "Você está divertido" },
+    "Brincalhão": { label: "Brincalhão", finalPhrase: "Você está brincalhão" },
+    "Acolhedor": { label: "Acolhedor", finalPhrase: "Você se sente acolhedor" },
+    "Afetuoso": { label: "Afetuoso", finalPhrase: "Você se sente afetuoso" },
+    "Seguro": { label: "Seguro", finalPhrase: "Você se sente seguro" },
+    "Confiante": { label: "Confiante", finalPhrase: "Você se sente confiante" },
+    "Calmo": { label: "Calmo", finalPhrase: "Você está calmo" },
+    "Sereno": { label: "Sereno", finalPhrase: "Você está sereno" },
+    "Tolerante": { label: "Tolerante", finalPhrase: "Você se sente tolerante" },
+    "Compreensivo": { label: "Compreensivo", finalPhrase: "Você está compreensivo" },
+    "Protetor": { label: "Protetor", finalPhrase: "Você se sente protetor" },
+    "Carinhoso": { label: "Carinhoso", finalPhrase: "Você se sente carinhoso" },
+    "Apreensão": { label: "Apreensão", finalPhrase: "Você sente apreensão" },
+    "Preocupação": { label: "Preocupação", finalPhrase: "Você sente preocupação" },
+    "Vulnerável": { label: "Vulnerável", finalPhrase: "Você se sente vulnerável" },
+    "Frágil": { label: "Frágil", finalPhrase: "Você se sente frágil" },
+    "Irritável": { label: "Irritável", finalPhrase: "Você está irritável" },
+    "Tenso": { label: "Tenso", finalPhrase: "Você está tenso" },
+    "Apavorado": { label: "Apavorado", finalPhrase: "Você está apavorado" },
+    "Assombrado": { label: "Assombrado", finalPhrase: "Você se sente assombrado" },
+    "Horrorizado": { label: "Horrorizado", finalPhrase: "Você está horrorizado" },
+    "Pavor": { label: "Pavor", finalPhrase: "Você sente pavor" },
+    "Desespero (Sub2)": { label: "Desespero", finalPhrase: "Você sente desespero" },
+    "Terror": { label: "Terror", finalPhrase: "Você sente terror" }
+};
+
+// Referências aos elementos do DOM
+const firstLayer = document.getElementById('first-layer');
+const dynamicLayer = document.getElementById('dynamic-layer'); // Nova ID para a camada de subemoções
+const finalLayer = document.getElementById('final-layer');
+const mainTitle = document.querySelector('.main-title');
+const subtitle = document.querySelector('.subtitle');
+const backButton = document.querySelector('.back-button');
+const finalEmotionDisplay = document.getElementById('final-emotion-display');
+const resetButton = document.getElementById('reset-quiz');
+const cardTemplate = document.getElementById('card-template'); // Template para clonar cards
+
+let currentPath = []; // Caminho de navegação atual: [Emoção Principal, Subemoção 1, Subemoção 2]
+
+/**
+ * Renderiza os cards de emoção em um elemento pai.
+ * @param {HTMLElement} parentElement - O elemento onde os cards serão anexados.
+ * @param {string[]} emotionKeys - Um array de chaves de emoções a serem renderizadas.
+ * @param {boolean} isSubemotion - Indica se os cards são subemoções para aplicar estilos específicos.
+ */
+function renderCards(parentElement, emotionKeys, isSubemotion = false) {
+    parentElement.innerHTML = ''; // Limpa o conteúdo existente
+    
+    // Adiciona a classe 'options-grid' para o layout de subemoções
+    if (isSubemotion) {
+        parentElement.classList.add('options-grid');
+        parentElement.classList.remove('emotion-grid'); // Remove a classe de grid principal, se presente
+    } else {
+        parentElement.classList.add('emotion-grid');
+        parentElement.classList.remove('options-grid');
+    }
+
+    emotionKeys.forEach(key => {
+        const emotion = emotionsData[key];
+        if (!emotion) {
+            console.warn(`Emoção ${key} não encontrada no emotionsData.`);
+            return;
+        }
+
+        const card = cardTemplate.content.cloneNode(true).children[0]; // Clona o template do card
+
+        // Adiciona classes específicas da primeira camada ou de subemoções
+        if (!isSubemotion) {
+            card.classList.add(key.toLowerCase().replace(/\s|\(|\)/g, '')); // Ex: "Raiva" -> "raiva"
+            card.querySelector('.emotion-icon').textContent = emotion.icon || '';
+            card.querySelector('.emotion-text').textContent = emotion.label;
+        } else {
+            card.classList.add('subemotion-card'); // Classe para subemoções
+            card.setAttribute('data-text', emotion.label); // Adiciona o texto como atributo para o CSS
+            // Remove o ícone e o texto padrão do template se for subemoção
+            const icon = card.querySelector('.emotion-icon');
+            const text = card.querySelector('.emotion-text');
+            if (icon) icon.remove();
+            if (text) text.remove();
+
+            // Adiciona uma classe específica combinando emoção-pai e subemoção (ex.: sub-alegria-feliz)
+            const parentKey = currentPath[currentPath.length - 1] || '';
+            const normalizedParent = String(parentKey).toLowerCase().replace(/\s|\(|\)/g, '');
+            const normalizedKey = String(key).toLowerCase().replace(/\s|\(|\)/g, '');
+            if (normalizedParent && normalizedKey) {
+                card.classList.add(`sub-${normalizedParent}-${normalizedKey}`);
+            }
+        }
+
+        card.dataset.emotionKey = key; // Armazena a chave da emoção no dataset
+        card.addEventListener('click', () => handleCardClick(key));
+        parentElement.appendChild(card);
+    });
+}
+
+/**
+ * Gerencia o clique em um card de emoção/subemoção.
+ * @param {string} clickedEmotionKey - A chave da emoção clicada.
+ */
+function handleCardClick(clickedEmotionKey) {
+    currentPath.push(clickedEmotionKey); // Adiciona a emoção clicada ao caminho
+
+    const emotion = emotionsData[clickedEmotionKey];
+    if (emotion && emotion.sub && emotion.sub.length > 0) {
+        // Se a emoção clicada tem subníveis, exibe a camada dinâmica com esses subníveis
+        displayLayer('dynamic', clickedEmotionKey);
+    } else {
+        // Se não tem mais subníveis, exibe a camada final
+        displayLayer('final', clickedEmotionKey);
+    }
+}
+
+/**
+ * Exibe a camada especificada e renderiza o conteúdo apropriado.
+ * @param {'first'|'dynamic'|'final'} layerName - O nome da camada a ser exibida.
+ * @param {string} [currentEmotionKey=null] - A chave da emoção atual (para dynamic/final layers).
+ */
+function displayLayer(layerName, currentEmotionKey = null) {
+    // Esconde todas as camadas primeiro
+    firstLayer.classList.add('hidden');
+    dynamicLayer.classList.add('hidden');
+    finalLayer.classList.add('hidden');
+
+    // Remove classes de grid para resetar antes de aplicar as corretas
+    dynamicLayer.classList.remove('emotion-grid', 'options-grid');
+
+    let currentEmotionData = currentEmotionKey ? emotionsData[currentEmotionKey] : null;
+
+    // Lógica para exibir a camada correta
+    switch (layerName) {
+        case 'first':
+            firstLayer.classList.remove('hidden');
+            mainTitle.textContent = 'Diga-me';
+            subtitle.textContent = 'Qual sua emoção predominante hoje?';
+            backButton.classList.add('hidden'); // Botão de voltar escondido na primeira camada
+            
+            // Renderiza as emoções principais (sem ícones explícitos no JS, pegando do HTML)
+            // Para a camada inicial, vamos manter os cards HTML estáticos para aproveitar as cores e classes existentes.
+            // Alternativamente, poderíamos gerá-los aqui, mas o seu HTML já os tem bem definidos.
+            // Se você quiser que a PRIMEIRA camada também seja 100% dinâmica, me avise!
+            // Por enquanto, só vamos mostrar a camada.
+            break;
+        case 'dynamic':
+            if (currentEmotionData) {
+                dynamicLayer.classList.remove('hidden');
+                mainTitle.textContent = currentEmotionData.phrases.titulo;
+                subtitle.textContent = currentEmotionData.phrases.subtitulo;
+                backButton.classList.remove('hidden');
+                renderCards(dynamicLayer, currentEmotionData.sub, true); // Renderiza subemoções
+            } else {
+                console.error("Dados da emoção não encontrados para a camada dinâmica.");
+                // Fallback para a primeira camada ou uma mensagem de erro
+                displayLayer('first');
+            }
+            break;
+        case 'final':
+            if (currentEmotionData) {
+                finalLayer.classList.remove('hidden');
+                mainTitle.textContent = "Sua emoção final"; // Título genérico para a camada final
+                subtitle.textContent = "Entendido!"; // Subtítulo genérico
+                backButton.classList.remove('hidden');
+                finalEmotionDisplay.textContent = currentEmotionData.finalPhrase || `Você se sente ${currentEmotionData.label}`;
+                localStorage.setItem('sentimentoFinalSelecionado', finalEmotionDisplay.textContent);
+            } else {
+                console.error("Dados da emoção não encontrados para a camada final.");
+                displayLayer('first');
+            }
+            break;
+    }
+}
+
+/**
+ * Gerencia o clique no botão "Voltar".
+ */
+function handleBackClick() {
+    if (currentPath.length > 1) {
+        currentPath.pop(); // Remove a última emoção do caminho
+        const previousEmotionKey = currentPath[currentPath.length - 1];
+        displayLayer('dynamic', previousEmotionKey); // Volta para a camada dinâmica anterior
+    } else {
+        currentPath = []; // Limpa o caminho se estiver voltando para a primeira camada
+        displayLayer('first');
+    }
+}
+
+/**
+ * Gerencia o clique no botão "Reiniciar Quiz".
+ */
+function handleResetQuiz() {
+    currentPath = [];
+    displayLayer('first');
+    localStorage.removeItem('sentimentoFinalSelecionado');
+}
+
+// --- Inicialização ---
+
+// Adiciona event listeners aos cartões de emoção principais (estáticos no HTML original)
+document.querySelectorAll('.emotion-card[data-emotion]').forEach(card => {
+    card.addEventListener('click', (event) => {
+        const primaryFeelingKey = event.currentTarget.dataset.emotion; // Usa data-emotion
+        currentPath = [primaryFeelingKey];
+        displayLayer('dynamic', primaryFeelingKey);
+    });
+});
+
+// Listener para o botão Voltar
+backButton.addEventListener('click', handleBackClick);
+
+// Listener para o botão Reiniciar Quiz
+resetButton.addEventListener('click', handleResetQuiz);
+
+// Inicializa a exibição na primeira camada ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    displayLayer('first');
+});

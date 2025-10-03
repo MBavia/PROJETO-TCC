@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda de Sentimentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/questionario.css') }}">
+</head>
+
+<body>
+    <a href="{{ url_for('index') }}" class="back-button">
+        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="back-text">Voltar</span>
+    </a>
+
+    <div class="container">
+        <h1 class="main-title">Diga-me</h1>
+        <h2 class="subtitle">Qual sua emoção predominante hoje?</h2>
+    
+        <div id="first-layer" class="layer emotion-grid">
+            <div id="card-alegria" class="emotion-card alegria" data-emotion="Alegria">
+                <div class="emotion-text">Alegria</div>
+            </div>
+            <div id="card-amor" class="emotion-card amor" data-emotion="Amor">
+                <div class="emotion-text">Amor</div>
+            </div>
+            <div id="card-medo" class="emotion-card medo" data-emotion="Medo">
+                <div class="emotion-text">Medo</div>
+            </div>
+            <div id="card-raiva" class="emotion-card raiva" data-emotion="Raiva">
+                <div class="emotion-text">Raiva</div>
+            </div>
+            <div id="card-tristeza" class="emotion-card tristeza" data-emotion="Tristeza">
+                <div class="emotion-text">Tristeza</div>
+            </div>
+            <div id="card-surpresa" class="emotion-card surpresa" data-emotion="Surpresa">
+                <div class="emotion-text">Surpresa</div>
+            </div>
+        </div>
+
+        <div id="dynamic-layer" class="layer">
+            <h2 class="subtitle">Detalhes de Alegria</h2>
+            <div class="options-grid">
+				<div class="emotion-card subemotion-card sub-alegria-encantado" data-text="Encantado"></div>
+				<div class="emotion-card subemotion-card sub-alegria-exaltado" data-text="Exaltado"></div>
+				<div class="emotion-card subemotion-card sub-alegria-entusiasmado" data-text="Entusiasmado"></div>
+				<div class="emotion-card subemotion-card sub-alegria-otimista" data-text="Otimista"></div>
+				<div class="emotion-card subemotion-card sub-alegria-orgulhoso" data-text="Orgulhoso"></div>
+				<div class="emotion-card subemotion-card sub-alegria-animado" data-text="Animado"></div>
+				<div class="emotion-card subemotion-card sub-alegria-feliz" data-text="Feliz"></div>
+				<div class="emotion-card subemotion-card sub-alegria-satisfeito" data-text="Satisfeito"></div>
+            </div>
+        </div>
+
+
+        <div id="final-layer" class="layer hidden">
+            <div class="final-card">
+                <p><span id="final-emotion-display"></span></p>
+            </div>
+            <button id="reset-quiz" class="quiz-button">Reiniciar</button>
+        </div>
+    </div>
+
+    <template id="card-template">
+        <div class="emotion-card">
+            <div class="emotion-icon"></div>
+            <div class="emotion-text"></div>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='js/questionario.js') }}"></script>
+</body>
+</html>

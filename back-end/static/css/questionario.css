@@ -1,0 +1,576 @@
+/* -- Importação de Fontes -- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+/* -- Variáveis de Cores e Sombra -- */
+:root {
+    --text-dark: #000000;
+    --text-light: #64748b;
+    --bg-main: #ffffff;
+    --card-bg: #ffffff;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-color: #e2e8f0;
+    
+    /* Cores das emoções */
+    --alegria-color: #4ade80;
+    --amor-color: #ef4444;
+    --medo-color: #7c3aed;
+    --raiva-color: #dc2626;
+    --tristeza-color: #3b82f6;
+    --surpresa-color: #fbbf24;
+
+    /* Novas variáveis para botões e acentos */
+    --primary-button-bg: #4ade80; /* Cor para o botão principal */
+    --primary-button-hover-bg: #34d399; /* Cor de hover */
+}
+
+/* --- Animações --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- Estilos Globais --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    animation: fadeIn 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* --- Container Principal --- */
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    animation: slideInUp 0.8s ease-out;
+}
+
+/* --- Título Principal --- */
+.main-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+    margin-bottom: 0.5rem;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    text-align: left;
+    margin-bottom: 2rem;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* --- Grid de Cartões Principais (Camada 1) --- */
+.emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+/* --- Cartões de Emoção (Base para todos os cards, incluindo o template) --- */
+.emotion-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--card-shadow);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+}
+
+/* --- Cores específicas para cada emoção principal (mantidas para os cards estáticos) --- */
+.emotion-card.alegria { background-color: var(--alegria-color); }
+.emotion-card.alegria#card-alegria {
+    background-image: url('../images/img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emotion-card.amor { background-color: var(--amor-color); }
+.emotion-card.amor#card-amor {
+    background-image: url('../images/img2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emotion-card.medo { background-color: var(--medo-color); }
+.emotion-card.medo#card-medo {
+    background-image: url('../images/img3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emotion-card.raiva { background-color: var(--raiva-color); }
+.emotion-card.raiva#card-raiva {
+    background-image: url('../images/img4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emotion-card.tristeza { background-color: var(--tristeza-color); }
+.emotion-card.tristeza#card-tristeza {
+    background-image: url('../images/img5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.emotion-card.surpresa { background-color: var(--surpresa-color); }
+.emotion-card.surpresa#card-surpresa {
+    background-image: url('../images/img6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.emotion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-card:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* --- Ícones e Textos das Emoções Principais --- */
+.emotion-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.emotion-text {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-family: 'arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.emotion-card:hover .emotion-icon {
+    filter: grayscale(0%);
+}
+
+/* --- Efeito de Brilho nos Cartões --- */
+.emotion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.emotion-card:hover::before {
+    left: 100%;
+}
+
+/* --- Camadas de Navegação --- */
+.layer {
+    width: 100%;
+    max-width: 800px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.layer.hidden {
+    display: none;
+}
+
+/* ------------------------------------------- */
+/* --- CORREÇÃO: Grid de Opções Secundárias --- */
+/* ------------------------------------------- */
+.options-grid {
+    display: grid;
+    /* 3 colunas fixas para formar 3-3-2 */
+    grid-template-columns: repeat(3, 180px);
+    gap: 1.5rem;
+    width: max-content; 
+    /* Centraliza o grid completo dentro do seu contêiner */
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Cartões 1 ao 6 se encaixam automaticamente (2 linhas de 3) */
+
+/* Card Extasiado (7º item) - Forçado para a Coluna 1 na 3ª linha */
+.options-grid > .emotion-card:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4; 
+}
+
+/* Card Jovial (8º item) - Forçado para a Coluna 3 na 3ª linha, pulando a Coluna 2 (Centralização) */
+.options-grid > .emotion-card:nth-child(8) {
+    grid-row: 3 / 4;
+}
+/* ------------------------------------------- */
+
+
+/* --- Cartões de Opção (Subemoções - Usado para cards gerados dinamicamente na dynamic-layer) --- */
+.emotion-card.subemotion-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--card-shadow);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* --- Estilo de texto para subemoções (seguindo padrão dos cards principais) --- */
+.emotion-card.subemotion-card {
+    position: relative;
+}
+
+.emotion-card.subemotion-card::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-family: 'arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* Fundo para subemoção Feliz quando a emoção pai é Alegria */
+.sub-alegria-feliz {
+    background-image: url('../images/img7.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-alegria-satisfeito {
+    background-image: url('../images/img8.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-alegria-animado { 
+    background-image: url('../images/img9.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color: #ffffff;
+}
+
+.sub-alegria-orgulhoso {
+    background-image: url('../images/img10.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff14;
+}
+
+
+.sub-alegria-otimista {
+    background-image: url('../images/img11.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-alegria-entusiasmado {
+    background-image: url('../images/img12.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Seletor do Extasiado e Jovial: Suas propriedades de background não precisam ser alteradas. */
+.sub-alegria-extasiado {
+    background-image: url('../images/img13.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-alegria-jovial {
+    background-image: url('../images/img14.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+
+
+.emotion-card.subemotion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-card.subemotion-card:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* --- Efeito de Brilho nos Cartões de Subemoções --- */
+.emotion-card.subemotion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.emotion-card.subemotion-card:hover::before {
+    left: 100%;
+}
+
+/* --- Botão de Voltar da Página (Existente) --- */
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--tristeza-color);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--tristeza-color);
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-subtle);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+}
+
+.back-button:hover {
+    background-color: var(--tristeza-color);
+    color: white;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* --- Botões de Navegação do Quiz (Novos) --- */
+.quiz-button {
+    background-color: var(--primary-button-bg);
+    color: rgb(255, 246, 246);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    box-shadow: var(--shadow-subtle);
+    align-self: center; /* Centraliza o botão */
+}
+
+.quiz-button:hover {
+    background-color: var(--primary-button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Cartão Final --- */
+.final-card {
+    background: linear-gradient(135deg, var(--medo-color), var(--tristeza-color)); /* Exemplo, pode ser ajustado */
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.final-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(99, 192, 164, 0.3);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: 400px;
+    }
+
+    .emotion-card {
+        min-height: 100px;
+        padding: 1rem;
+    }
+
+    .emotion-icon {
+        font-size: 2rem;
+    }
+
+    .emotion-text {
+        font-size: 0.9rem;
+    }
+
+    .options-grid {
+        width: 100%; /* no mobile mantém largura total */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    /* Remove a centralização forçada em colunas no mobile, pois ele deve ser 1 coluna */
+    .options-grid > .emotion-card:nth-child(7),
+    .options-grid > .emotion-card:nth-child(8) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .emotion-card.subemotion-card { /* Seletor corrigido */
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+
+    .back-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .back-text {
+        display: none;
+    }
+    
+    .back-button:hover .back-arrow {
+        transform: translateX(-1px);
+    }
+}
+
+@media (max-width: 480px) {
+    .emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .emotion-card {
+        min-height: 80px;
+        padding: 0.8rem;
+    }
+
+    .emotion-icon {
+        font-size: 1.5rem;
+    }
+
+    .emotion-text {
+        font-size: 0.8rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+} 

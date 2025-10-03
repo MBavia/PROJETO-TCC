@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu terapeuta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/opt-terapeuta.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Botão de Voltar -->
+    <a href="{{ url_for('index') }}" class="back-button">
+        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="back-text">Voltar</span>
+    </a>
+
+    <div class="container">
+        <h1 class="main-title">Está na hora de escolher!</h1>
+        <h2 class="subtitle">Com qual terapeuta deseja se consultar hoje?</h2>
+
+        <div class="terapist-grid">
+            <a href="{{ url_for('chat', terapeuta='tcc') }}" class="terapist-card">
+                <img src="{{ url_for('static', filename='images/angela.png') }}" alt="Avatar de Angela" class="terapist-avatar">
+                <h3 class="terapist-name">Angela</h3>
+                <span class="terapist-specialty">Terapia Cognitivo-Comportamental</span>
+                <p class="terapist-description">Ideal para focar em problemas práticos, identificando e mudando padrões de pensamento e comportamento.</p>
+            </a>
+            
+            <a href="{{ url_for('chat', terapeuta='sistemico') }}" class="terapist-card">
+                <img src="{{ url_for('static', filename='images/nicolas.png') }}" alt="Avatar de Nicolas" class="terapist-avatar">
+                <h3 class="terapist-name">Nicolas</h3>
+                <span class="terapist-specialty">Terapia Sistêmica</span>
+                <p class="terapist-description">Analisa como seus relacionamentos e o ambiente social influenciam seus sentimentos e ações.</p>
+            </a>
+            
+            <a href="{{ url_for('chat', terapeuta='humanista') }}" class="terapist-card">
+                <img src="{{ url_for('static', filename='images/ana_alice.png') }}" alt="Avatar de Ana Alice" class="terapist-avatar">
+                <h3 class="terapist-name">Ana Alice</h3>
+                <span class="terapist-specialty">Abordagem Centrada na Pessoa</span>
+                <p class="terapist-description">Focada no acolhimento e na escuta empática para te ajudar a se conectar com seus próprios sentimentos e potencial.</p>
+            </a>
+            
+            <a href="{{ url_for('chat', terapeuta='comportamental') }}" class="terapist-card">
+                <img src="{{ url_for('static', filename='images/claudio.png') }}" alt="Avatar de Claudio" class="terapist-avatar">
+                <h3 class="terapist-name">Claudio</h3>
+                <span class="terapist-specialty">Terapia Comportamental</span>
+                <p class="terapist-description">Ideal para focar em mudar comportamentos específicos através de análise de gatilhos e planos de ação práticos.</p>
+            </a>
+        </div>
+    </div>
+    
+</body>
+
+</html>

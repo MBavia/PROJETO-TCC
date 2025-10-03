@@ -1,0 +1,201 @@
+/* -- Importação de Fontes -- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+/* -- Variáveis de Cores -- */
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #ff6b35;
+    --text-dark: #334155;
+    --text-light: #64748b;
+    --bg-light: #ffffff;
+    --bg-main: #ffffff;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-color: #e2e8f0;
+}
+
+/* -- Reset e Estilos Globais -- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -- Animações -- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* -- Layout Geral -- */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out;
+    gap: 2rem;
+}
+
+/* -- Cabeçalho e Rodapé -- */
+.logo-container {
+    display: flex;
+    align-items:center;
+    gap: 0.4rem;
+}
+
+.logo-image {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.project-name {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-subtitle, .support-info {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.welcome-text {
+    font-weight: 500;
+}
+
+.contact-link {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* -- Seção de Introdução -- */
+.intro-section {
+    text-align: left;
+    margin-bottom: 0;
+    max-width: 700px;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.intro-heading {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.4;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* -- Seção de Opções (Cards) -- */
+.options-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    align-self: center;
+    animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.option-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--card-shadow);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.card-icon {
+    margin-bottom: 1.5rem;
+}
+
+.card-icon svg {
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.card-label {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* -- Responsividade -- */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .intro-heading {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+    }
+
+    .options-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .option-card {
+        width: 240px;
+        height: 240px;
+    }
+}
