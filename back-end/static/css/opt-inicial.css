@@ -159,11 +159,22 @@ body {
 
 .card-icon {
     margin-bottom: 1.5rem;
+    
 }
 
 .card-icon svg {
     transition: all 0.3s ease;
     color: white;
+    
+
+}
+
+.card-icon img {
+    
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* deixa branco como os ícones anteriores */
 }
 
 .card-label {

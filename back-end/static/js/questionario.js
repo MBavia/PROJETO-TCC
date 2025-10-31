@@ -69,142 +69,147 @@ const emotionsData = {
     },
     "Surpresa": {
         label: "Surpresa",
-        icon: "😲",
         phrases: { titulo: "Surpresa, uau! Isso foi inesperado 😲", subtitulo: "O que essa surpresa está te fazendo sentir?" },
-        sub: ["Estarrecido", "Confusão", "Atônito", "Chocado", "Perplexo (Sub)"] // "Perplexo (Sub)" para evitar conflito
+        sub: ["Atortoamento", "Confusão", "Espanto", "Superação", "Abalado"] // "Perplexo (Sub)" para evitar conflito
     },
+    "Atortoamento": {
+        label: "Atortoamento",
+        phrases: { titulo: "Atortoamento, algo te deixou desorientado. 😵", subtitulo: "E como esse atortoamento está te afetando nesse momento?" },
+        sub: ["Consternado", "Chocado"]
+    },
+    "Confusão": {
+        label: "Confusão",
+        phrases: { titulo: "Confusão, tudo parece meio bagunçado, né? 🤯", subtitulo: "O que exatamente essa confusão faz você sentir?" },
+        sub: ["Desiludido", "Perplexo"] // "Perplexo (Sub2)" para evitar conflito
+    },
+    "Espanto": {
+        label: "Espanto",
+        phrases: { titulo: "Espanto, algo muito assustador está acontecendo. 😱", subtitulo: "O que esse espanto está te fazendo sentir agora?" },
+        sub: ["Atônito", "Impressionado"]
+    },
+    "Superação": {
+        label: "Superação",
+        phrases: { titulo: "Superação, você conseguiu superar isso! 😌", subtitulo: "Como essa superação está te fazendo se sentir agora?" },
+        sub: ["Espanto", "Sem palavras"]
+    },
+    "Abalado": {
+        label: "Abalado",
+        phrases: { titulo: "Abalado, algo te deixou desorientado. 😵", subtitulo: "E como esse abalado está te afetando nesse momento?" },
+        sub: ["Estimulado", "Tocado"]
+    },
+
     "Estarrecido": {
         label: "Estarrecido",
         phrases: { titulo: "Estarrecido, que choque inesperado! 😱", subtitulo: "E como isso faz você se sentir agora?" },
         sub: ["Surpreso (Sub)", "Descrente"] // "Surpreso (Sub)" para evitar conflito
     },
-    "Confusão": {
-        label: "Confusão",
-        phrases: { titulo: "Confusão, tudo parece meio bagunçado, né? 🤯", subtitulo: "O que exatamente essa confusão faz você sentir?" },
-        sub: ["Confuso", "Perplexo (Sub2)"] // "Perplexo (Sub2)" para evitar conflito
-    },
-    "Atônito": {
-        label: "Atônito",
-        phrases: { titulo: "Atônito, sem palavras... 😳", subtitulo: "E como isso faz você se sentir nesse momento?" },
-        sub: ["Impressionado", "Aturdido"]
-    },
-    "Chocado": {
-        label: "Chocado",
-        phrases: { titulo: "Chocado, isso te pegou de surpresa! 😮", subtitulo: "O que exatamente esse choque provoca em você?" },
-        sub: ["Abismado", "Enaltecido"]
-    },
-    "Perplexo (Sub)": { // Chave ajustada
-        label: "Perplexo",
-        phrases: { titulo: "Perplexo, difícil até de entender, né? 🤔", subtitulo: "E como essa perplexidade te faz se sentir agora?" },
-        sub: ["Intrigado", "Questionador"]
-    },
     "Alegria": {
         label: "Alegria",
         icon: "😊",
         phrases: { titulo: "Alegria, que coisa boa! 😄", subtitulo: "O que essa alegria está te fazendo sentir?" },
-        sub: ["Feliz", "Satisfeito", "Animado", "Orgulhoso", "Otimista", "Entusiasmado", "Extasiado", "Jovial"]
+        sub: ["Feliz", "Satisfeito", "Animado", "Orgulhoso", "Otimista", "Entusiasmado", "Exaltado", "Encantado"]
     },
     "Feliz": {
         label: "Feliz",
         phrases: { titulo: "Feliz, que coisa boa! 😄", subtitulo: "O que exatamente essa felicidade faz você sentir?" },
-        sub: ["Contente", "Jubiloso"]
+        sub: ["Divertido", "Deleite"]
     },
     "Satisfeito": {
         label: "Satisfeito",
         phrases: { titulo: "Satisfeito, que sensação gostosa! 😊", subtitulo: "O que essa satisfação está gerando em você?" },
-        sub: ["Grato", "Relaxado"]
+        sub: ["Gozo", "Saciado"]
     },
     "Animado": {
         label: "Animado",
         phrases: { titulo: "Animado, cheio de energia! 🤩", subtitulo: "Como esse ânimo está te fazendo se sentir?" },
-        sub: ["Estimulado", "Otimista (Sub)"] // "Otimista (Sub)" para evitar conflito
+        sub: ["Abençoado", "Jovial"] // "Otimista (Sub)" para evitar conflito
     },
     "Orgulhoso": {
         label: "Orgulhoso",
         phrases: { titulo: "Orgulhoso, parabéns por isso! 😎", subtitulo: "O que esse orgulho provoca em você agora?" },
-        sub: ["Vitorioso", "Realizado"]
+        sub: ["Famoso", "Triunfante"]
     },
     "Otimista": {
         label: "Otimista",
         phrases: { titulo: "Otimista, cheio de esperança! ☀️", subtitulo: "O que essa esperança traz para você nesse momento?" },
-        sub: ["Esperançoso", "Inspirado"]
+        sub: ["Esperançoso", "Ansioso"]
     },
     "Entusiasmado": {
         label: "Entusiasmado",
         phrases: { titulo: "Entusiasmado, energia lá em cima! 🔥", subtitulo: "E como esse entusiasmo faz você se sentir agora?" },
-        sub: ["Excitado", "Empolgado"]
+        sub: ["Excitado", "Zelo"]
     },
-    "Extasiado": {
-        label: "Extasiado",
-        phrases: { titulo: "Extasiado, que momento incrível! ✨", subtitulo: "O que esse êxtase está te causando agora?" },
-        sub: ["Radiante", "Euforia"]
+    "Exaltado": {
+        label: "Exaltado",
+        phrases: { titulo: "Exaltado, que momento incrível! ✨", subtitulo: "O que esse êxtase está te causando agora?" },
+        sub: ["Júbilo", "Euforia"]
     },
-    "Jovial": {
-        label: "Jovial",
-        phrases: { titulo: "Jovial, leveza e diversão no ar! 😎", subtitulo: "E como essa jovialidade faz você se sentir nesse momento?" },
-        sub: ["Divertido", "Brincalhão"]
+    "Encantado": {
+        label: "Encantado",
+        phrases: { titulo: "Encantado, que maravilha! ✨", subtitulo: "O que esse encantamento está te causando agora?" },
+        sub: ["Êxtase", "Sedução"]
     },
     "Amor": {
         label: "Amor",
         icon: "🥰",
         phrases: { titulo: "Amor, que sensação maravilhosa! ❤️", subtitulo: "O que esse amor está te fazendo sentir?" },
-        sub: ["Amigável", "Confiança", "Paz", "Aceitação", "Cuidado"]
+        sub: ["Pacífico", "Afetuoso", "Desejoso", "Nostálgico", "Encantado"]
     },
-    "Amigável": {
-        label: "Amigável",
-        phrases: { titulo: "Amigável, que conexão maravilhosa! 🤝", subtitulo: "O que essa amizade está gerando em você?" },
-        sub: ["Acolhedor", "Afetuoso"]
+    "Pacífico": {
+        label: "Pacífico",
+        phrases: { titulo: "Pacífico, que conexão maravilhosa! 🤝", subtitulo: "O que essa amizade está gerando em você?" },
+        sub: ["Pleno", "Liberdade"]
     },
-    "Confiança": {
-        label: "Confiança",
-        phrases: { titulo: "Confiança, é tão bom se sentir seguro. 🔐", subtitulo: "E como essa confiança te faz se sentir?" },
-        sub: ["Seguro", "Confiante"]
+    "Afetuoso": {
+        label: "Afetuoso",
+        phrases: { titulo: "Afetuoso, é tão bom se sentir seguro. 🔐", subtitulo: "E como essa confiança te faz se sentir?" },
+        sub: ["Compaixão", "Cuidado"]
     },
-    "Paz": {
-        label: "Paz",
-        phrases: { titulo: "Paz, que tranquilidade maravilhosa. 🕊️", subtitulo: "E como essa paz se reflete em você agora?" },
-        sub: ["Calmo", "Sereno"]
+    "Desejoso": {
+        label: "Desejoso",
+        phrases: { titulo: "Desejoso, que tranquilidade maravilhosa. 🕊️", subtitulo: "E como essa paz se reflete em você agora?" },
+        sub: ["Fascínio", "Paixão"]
     },
-    "Aceitação": {
-        label: "Aceitação",
-        phrases: { titulo: "Aceitação, acolher faz bem. 💖", subtitulo: "O que essa aceitação está gerando dentro de você?" },
-        sub: ["Tolerante", "Compreensivo"]
+    "Nostálgico": {
+        label: "Nostálgico",
+        phrases: { titulo: "Nostálgico, acolher faz bem. 💖", subtitulo: "O que essa aceitação está gerando dentro de você?" },
+        sub: ["Atração", "Sensível"]
     },
-    "Cuidado": {
-        label: "Cuidado",
-        phrases: { titulo: "Cuidado, um gesto de amor e proteção. 💝", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
-        sub: ["Protetor", "Carinhoso"]
+    "Encantado": {
+        label: "Encantado",
+        phrases: { titulo: "Encantado, um gesto de amor e proteção. 💝", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
+        sub: ["Romântico", "Carinho"]
     },
     "Medo": {
         label: "Medo",
         icon: "😰",
         phrases: { titulo: "Medo, opa... algo te deixou apreensivo 😨", subtitulo: "O que exatamente esse medo está te fazendo sentir?" },
-        sub: ["Ansiedade", "Inseguro", "Nervoso", "Assustado", "Aterrorizado", "Pânico (Sub)"] // "Pânico (Sub)" para evitar conflito
+        sub: ["Horrorizado", "Inseguro", "Nervoso", "Assustado", "Aterrorizado", "Pânico (Sub)"] // "Pânico (Sub)" para evitar conflito
     },
-    "Ansiedade": {
-        label: "Ansiedade",
-        phrases: { titulo: "Ansiedade, que aperto no peito... 😰", subtitulo: "O que exatamente essa ansiedade está te fazendo sentir?" },
-        sub: ["Apreensão", "Preocupação"]
+    "Horrorizado": {
+        label: "Horrorizado",
+        phrases: { titulo: "Horrorizado, algo muito assustador está acontecendo. 😱", subtitulo: "O que esse horror está te fazendo sentir agora?" },
+        sub: ["Mortificado", "Pavor"]
     },
     "Inseguro": {
         label: "Inseguro",
         phrases: { titulo: "Inseguro, parece que tudo balança... 😟", subtitulo: "E como essa insegurança te afeta agora?" },
-        sub: ["Vulnerável", "Frágil"]
+        sub: ["Inedequação", "Inferioridade"]
     },
     "Nervoso": {
         label: "Nervoso",
         phrases: { titulo: "Nervoso, difícil manter o controle, né? 😬", subtitulo: "O que esse nervosismo provoca em você?" },
-        sub: ["Irritável", "Tenso"]
+        sub: ["Ansiedade", "Preocupação"]
     },
     "Assustado": {
         label: "Assustado",
         phrases: { titulo: "Assustado, algo te deixou alerta. 😨", subtitulo: "E como esse medo está te afetando nesse momento?" },
-        sub: ["Apavorado", "Assombrado"]
+        sub: ["Abandono", "Amendrontado"]
     },
     "Aterrorizado": {
         label: "Aterrorizado",
         phrases: { titulo: "Aterrorizado, isso parece muito intenso! 😱", subtitulo: "O que esse terror faz você sentir agora?" },
-        sub: ["Horrorizado", "Pavor"]
+        sub: ["Histeria", "Pânico"]
     },
     "Pânico (Sub)": { // Chave ajustada
         label: "Pânico",
@@ -262,7 +267,7 @@ const emotionsData = {
     "Divertido": { label: "Divertido", finalPhrase: "Você está divertido" },
     "Brincalhão": { label: "Brincalhão", finalPhrase: "Você está brincalhão" },
     "Acolhedor": { label: "Acolhedor", finalPhrase: "Você se sente acolhedor" },
-    "Afetuoso": { label: "Afetuoso", finalPhrase: "Você se sente afetuoso" },
+    // REMOVIDO: "Afetuoso" com finalPhrase — já existe como nó com subemoções
     "Seguro": { label: "Seguro", finalPhrase: "Você se sente seguro" },
     "Confiante": { label: "Confiante", finalPhrase: "Você se sente confiante" },
     "Calmo": { label: "Calmo", finalPhrase: "Você está calmo" },
@@ -282,7 +287,49 @@ const emotionsData = {
     "Horrorizado": { label: "Horrorizado", finalPhrase: "Você está horrorizado" },
     "Pavor": { label: "Pavor", finalPhrase: "Você sente pavor" },
     "Desespero (Sub2)": { label: "Desespero", finalPhrase: "Você sente desespero" },
-    "Terror": { label: "Terror", finalPhrase: "Você sente terror" }
+    "Terror": { label: "Terror", finalPhrase: "Você sente terror" },
+    "Deleite": { label: "Deleite", finalPhrase: "Você se sente deleite"},
+    "Gozo": { label: "Gozo", finalPhrase: "Você se sente gozo"},
+    "Saciado": { label: "Saciado", finalPhrase: "Você se sente saciado"},
+    "Abençoado": { label: "Abençoado", finalPhrase: "Você se sente abençoado"},
+    "Jovial": { label: "Jovial", finalPhrase: "Você se sente jovial"},
+    "Famoso": { label: "Famoso", finalPhrase: "Você se sente famoso"},
+    "Triunfante": { label: "Triunfante", finalPhrase: "Você se sente triunfante"},
+    "Esperançoso": { label: "Esperançoso", finalPhrase: "Você se sente esperançoso"},
+    "Ansioso": { label: "Ansioso", finalPhrase: "Você se sente ansioso"},
+    "Zelo": { label: "Zelo", finalPhrase: "Você se sente zelo"},
+    "Júbilo": { label: "Júbilo", finalPhrase: "Você se sente júbilo"},
+    "Êxtase": { label: "Êxtase", finalPhrase: "Você se sente êxtase"},
+    "Sedução": { label: "Sedução", finalPhrase: "Você se sente sedução"},
+    // REMOVIDOS: nós intermediários do Amor (possuem subníveis, não são finais)
+    // "Pacífico", "Afetuoso", "Desejoso", "Nostálgico", "Encantado"
+    "Pleno": { label: "Pleno", finalPhrase: "Você se sente pleno"},
+    "Liberdade": { label: "Liberdade", finalPhrase: "Você se sente liberdade"},
+    "Compaixão": { label: "Compaixão", finalPhrase: "Você se sente compaixão"},
+    "Cuidado": { label: "Cuidado", finalPhrase: "Você se sente cuidado"},
+    "Fascínio": { label: "Fascínio", finalPhrase: "Você se sente fascínio"},
+    "Paixão": { label: "Paixão", finalPhrase: "Você se sente paixão"},
+    "Atração": { label: "Atração", finalPhrase: "Você se sente atração"},
+    "Sensível": { label: "Sensível", finalPhrase: "Você se sente sensível"},
+    "Romântico": { label: "Romântico", finalPhrase: "Você se sente romântico"},
+    "Carinho": { label: "Carinho", finalPhrase: "Você se sente carinho"},
+    "Mortificado": { label: "Mortificado", finalPhrase: "Você se sente mortificado"},
+    "Histeria": { label: "Histeria", finalPhrase: "Você se sente histeria"},
+    "Pânico": { label: "Pânico", finalPhrase: "Você se sente pânico"},
+    "Abandono": { label: "Abandono", finalPhrase: "Você se sente abandonado"},
+    "Amendrontado": { label: "Amendrontado", finalPhrase: "Você se sente amendrontado"},
+    "Inedequação": { label: "Inedequação", finalPhrase: "Você se sente inedequação"},
+    "Inferioridade": { label: "Inferioridade", finalPhrase: "Você se sente inferioridade"},
+    "Ansiedade": { label: "Ansiedade", finalPhrase: "Você se sente ansiedade"},
+    "Preocupação": { label: "Preocupação", finalPhrase: "Você se sente preocupação"},
+    "Estimulado": { label: "Estimulado", finalPhrase: "Você se sente estimulado"},
+    "Chocado": { label: "Chocado", finalPhrase: "Você se sente chocado"},
+    "Desiludido": { label: "Desiludido", finalPhrase: "Você se sente desiludido"},
+    "Perplexo": { label: "Perplexo", finalPhrase: "Você se sente perplexo"},
+    "Atônito": { label: "Atônito", finalPhrase: "Você se sente atônito"},
+    "Impressionado": { label: "Impressionado", finalPhrase: "Você se sente impressionado"},
+    "Sem palavras": { label: "Sem palavras", finalPhrase: "Você se sente sem palavras"},
+    "Tocado": { label: "Tocado", finalPhrase: "Você se sente tocado"}
 };
 
 // Referências aos elementos do DOM
@@ -306,7 +353,7 @@ let currentPath = []; // Caminho de navegação atual: [Emoção Principal, Sube
  */
 function renderCards(parentElement, emotionKeys, isSubemotion = false) {
     parentElement.innerHTML = ''; // Limpa o conteúdo existente
-    
+
     // Adiciona a classe 'options-grid' para o layout de subemoções
     if (isSubemotion) {
         parentElement.classList.add('options-grid');
@@ -394,7 +441,7 @@ function displayLayer(layerName, currentEmotionKey = null) {
             mainTitle.textContent = 'Diga-me';
             subtitle.textContent = 'Qual sua emoção predominante hoje?';
             backButton.classList.add('hidden'); // Botão de voltar escondido na primeira camada
-            
+
             // Renderiza as emoções principais (sem ícones explícitos no JS, pegando do HTML)
             // Para a camada inicial, vamos manter os cards HTML estáticos para aproveitar as cores e classes existentes.
             // Alternativamente, poderíamos gerá-los aqui, mas o seu HTML já os tem bem definidos.

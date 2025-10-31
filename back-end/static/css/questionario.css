@@ -356,7 +356,7 @@ body {
 }
 
 /* Seletor do Extasiado e Jovial: Suas propriedades de background não precisam ser alteradas. */
-.sub-alegria-extasiado {
+.sub-alegria-exaltado {
     background-image: url('../images/img13.png');
     background-size: cover;
     background-position: center;
@@ -364,13 +364,327 @@ body {
     color: #ffffff;
 }
 
-.sub-alegria-jovial {
+.sub-alegria-encantado {
     background-image: url('../images/img14.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
+
+/* Sub-sub cards de 'Feliz' */
+.sub-feliz-divertido {
+    background-image: url('../images/divertido.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-feliz-deleite {
+    background-image: url('../images/deleite.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Satisfeito' */
+.sub-satisfeito-gozo {
+    background-image: url('../images/gozo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-satisfeito-saciado {
+    background-image: url('../images/saciado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Animado' */
+.sub-animado-abençoado {
+    background-image: url('../images/abençoado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-animado-jovial {
+    background-image: url('../images/jovial.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Orgulhoso' */
+.sub-orgulhoso-famoso {
+    background-image: url('../images/famoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-orgulhoso-triunfante {
+    background-image: url('../images/triunfante.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Otimista' */
+.sub-otimista-esperançoso {
+    background-image: url('../images/esperançoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-otimista-ansioso {
+    background-image: url('../images/ansioso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Entusiasmado' */
+.sub-entusiasmado-excitado {
+    background-image: url('../images/excitado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-entusiasmado-zelo {
+    background-image: url('../images/zelo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Exaltado' */
+.sub-exaltado-júbilo {
+    background-image: url('../images/jubilo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-exaltado-euforia {
+    background-image: url('../images/euforia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Encantado' */
+.sub-encantado-êxtase {
+    background-image: url('../images/extase.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-encantado-sedução {
+    background-image: url('../images/seducao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Amor' */
+.sub-amor-pacífico {
+    background-image: url('../images/pacifico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-amor-pleno {
+    background-image: url('../images/pleno.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-amor-liberdade {
+    background-image: url('../images/liberdade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-amor-afetuoso {
+    background-image: url('../images/afetuoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-amor-desejoso {
+    background-image: url('../images/desejoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-amor-nostálgico {
+    background-image: url('../images/nostalgico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-amor-encantado {
+    background-image: url('../images/encantado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards do grupo 'Amor' */
+/* Pacífico -> Pleno | Liberdade */
+.sub-pacífico-pleno {
+    background-image: url('../images/pleno.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-pacífico-liberdade {
+    background-image: url('../images/liberdade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Afetuoso -> Compaixão | Cuidado */
+.sub-afetuoso-compaixão {
+    background-image: url('../images/compaixao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-afetuoso-cuidado {
+    background-image: url('../images/cuidado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Desejoso -> Fascínio | Paixão */
+.sub-desejoso-fascínio {
+    background-image: url('../images/facinio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-desejoso-paixão {
+    background-image: url('../images/paixao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Nostálgico -> Atração | Sensível */
+.sub-nostálgico-atração {
+    background-image: url('../images/atracao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-encantado-romântico {
+    background-image: url('../images/romantico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-encantado-carinho {
+    background-image: url('../images/carinho.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+
+.sub-nostálgico-sensível {
+    background-image: url('../images/sensivel.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-atortoamento {
+    background-image: url('../images/atortamento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-confusao {
+    background-image: url('../images/confusao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-espanto {
+    background-image: url('../images/espanto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-superacao {
+    background-image: url('../images/superacao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-abalado {
+    background-image: url('../images/abalo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+
+
 
 
 
