@@ -2,219 +2,213 @@
 const emotionsData = {
     "Raiva": {
         label: "Raiva",
-        icon: "😠",
-        phrases: { titulo: "Raiva, uau! Isso te deixou irritado 😡", subtitulo: "O que exatamente essa raiva está te fazendo sentir?" },
+        phrases: { titulo: "Raiva, uau! Isso te deixou irritado", subtitulo: "O que exatamente essa raiva está te fazendo sentir?" },
         sub: ["Frustração", "Inveja", "Irritação", "Exasperado", "Fúria"]
     },
     "Frustração": {
         label: "Frustração",
-        phrases: { titulo: "Frustração, que coisa chata! 😤", subtitulo: "O que exatamente essa frustração está te fazendo sentir?" },
+        phrases: { titulo: "Frustração, que coisa chata!", subtitulo: "O que exatamente essa frustração está te fazendo sentir?" },
         sub: ["Agridido", "Indignado"]
     },
     "Inveja": {
         label: "Inveja",
-        phrases: { titulo: "Inveja, isso está te incomodando, né? 😒", subtitulo: "O que essa inveja está te fazendo sentir?" },
+        phrases: { titulo: "Inveja, isso está te incomodando, né?", subtitulo: "O que essa inveja está te fazendo sentir?" },
         sub: ["Ciumento", "Rancoroso"]
     },
     "Irritação": {
         label: "Irritação",
-        phrases: { titulo: "Irritação, que desconforto! 😠", subtitulo: "O que exatamente essa irritação provoca em você?" },
+        phrases: { titulo: "Irritação, que desconforto!", subtitulo: "O que exatamente essa irritação provoca em você?" },
         sub: ["Aborrecido", "Crítico", "Zangado"]
     },
     "Exasperado": {
         label: "Exasperado",
-        phrases: { titulo: "Exasperado, parece que tudo está demais! 😩", subtitulo: "Como isso está te fazendo se sentir agora?" },
+        phrases: { titulo: "Exasperado, parece que tudo está demais!", subtitulo: "Como isso está te fazendo se sentir agora?" },
         sub: ["Irritado (Sub)", "Amargurado"] // "Irritado (Sub)" para evitar conflito com "Irritação" principal
     },
     "Fúria": {
         label: "Fúria",
-        phrases: { titulo: "Fúria, está queimando aí dentro, né? 😡", subtitulo: "O que essa fúria está te causando nesse momento?" },
+        phrases: { titulo: "Fúria, está queimando aí dentro, né?", subtitulo: "O que essa fúria está te causando nesse momento?" },
         sub: ["Furioso", "Agressivo"]
     },
     "Tristeza": {
         label: "Tristeza",
-        icon: "😢",
-        phrases: { titulo: "Tristeza, que pena! 😢", subtitulo: "O que essa tristeza está te fazendo sentir?" },
+        phrases: { titulo: "Tristeza, que pena!", subtitulo: "O que essa tristeza está te fazendo sentir?" },
         sub: ["Sofrimento", "Vergonha", "Desapontamento", "Remorso", "Desespero (Sub)", "Depressão"] // "Desespero (Sub)" para evitar conflito
     },
     "Sofrimento": {
         label: "Sofrimento",
-        phrases: { titulo: "Sofrimento, sinto muito por isso. 😢", subtitulo: "O que exatamente esse sofrimento faz você sentir?" },
+        phrases: { titulo: "Sofrimento, sinto muito por isso.", subtitulo: "O que exatamente esse sofrimento faz você sentir?" },
         sub: ["Angústia", "Agonia"]
     },
     "Vergonha": {
         label: "Vergonha",
-        phrases: { titulo: "Vergonha, que sensação difícil... 😳", subtitulo: "Como essa vergonha está te afetando nesse momento?" },
+        phrases: { titulo: "Vergonha, que sensação difícil...", subtitulo: "Como essa vergonha está te afetando nesse momento?" },
         sub: ["Culpa", "Humilhação"]
     },
     "Desapontamento": {
         label: "Desapontamento",
-        phrases: { titulo: "Desapontamento, poxa... que pena. 😔", subtitulo: "E como esse desapontamento faz você se sentir agora?" },
+        phrases: { titulo: "Desapontamento, poxa... que pena.", subtitulo: "E como esse desapontamento faz você se sentir agora?" },
         sub: ["Desanimado", "Desiludido"]
     },
     "Remorso": {
         label: "Remorso",
-        phrases: { titulo: "Remorso, quando o passado pesa... 😞", subtitulo: "O que esse remorso faz você sentir agora?" },
+        phrases: { titulo: "Remorso, quando o passado pesa...", subtitulo: "O que esse remorso faz você sentir agora?" },
         sub: ["Arrependimento", "Culpa Profunda"]
     },
     "Desespero (Sub)": { // Chave ajustada
         label: "Desespero",
-        phrases: { titulo: "Desespero, quando tudo parece perdido... 😩", subtitulo: "Como esse desespero está te impactando nesse momento?" },
+        phrases: { titulo: "Desespero, quando tudo parece perdido...", subtitulo: "Como esse desespero está te impactando nesse momento?" },
         sub: ["Impotência", "Desesperança"]
     },
     "Depressão": {
         label: "Depressão",
-        phrases: { titulo: "Depressão, parece que está pesado demais... 😞", subtitulo: "E como essa depressão faz você se sentir?" },
+        phrases: { titulo: "Depressão, parece que está pesado demais...", subtitulo: "E como essa depressão faz você se sentir?" },
         sub: ["Vazio", "Pesado"]
     },
     "Surpresa": {
         label: "Surpresa",
-        icon: "😲",
-        phrases: { titulo: "Surpresa, uau! Isso foi inesperado 😲", subtitulo: "O que essa surpresa está te fazendo sentir?" },
+        phrases: { titulo: "Surpresa, uau! Isso foi inesperado", subtitulo: "O que essa surpresa está te fazendo sentir?" },
         sub: ["Atortoamento", "Confusão", "Espanto", "Superação", "Abalado"] // "Perplexo (Sub)" para evitar conflito
     },
     "Atortoamento": {
         label: "Atortoamento",
-        phrases: { titulo: "Atortoamento, algo te deixou desorientado. 😵", subtitulo: "E como esse atortoamento está te afetando nesse momento?" },
+        phrases: { titulo: "Atortoamento, algo te deixou desorientado.", subtitulo: "E como esse atortoamento está te afetando nesse momento?" },
         sub: ["Consternado", "Chocado"]
     },
     "Confusão": {
         label: "Confusão",
-        phrases: { titulo: "Confusão, tudo parece meio bagunçado, né? 🤯", subtitulo: "O que exatamente essa confusão faz você sentir?" },
+        phrases: { titulo: "Confusão, tudo parece meio bagunçado, né?", subtitulo: "O que exatamente essa confusão faz você sentir?" },
         sub: ["Desiludido", "Perplexo"] // "Perplexo (Sub2)" para evitar conflito
     },
     "Espanto": {
         label: "Espanto",
-        phrases: { titulo: "Espanto, algo muito assustador está acontecendo. 😱", subtitulo: "O que esse espanto está te fazendo sentir agora?" },
+        phrases: { titulo: "Espanto, algo muito assustador está acontecendo.", subtitulo: "O que esse espanto está te fazendo sentir agora?" },
         sub: ["Atônito", "Impressionado"]
     },
     "Superação": {
         label: "Superação",
-        phrases: { titulo: "Superação, você conseguiu superar isso! 😌", subtitulo: "Como essa superação está te fazendo se sentir agora?" },
+        phrases: { titulo: "Superação, você conseguiu superar isso!", subtitulo: "Como essa superação está te fazendo se sentir agora?" },
         sub: ["Espanto", "Sem palavras"]
     },
     "Abalado": {
         label: "Abalado",
-        phrases: { titulo: "Abalado, algo te deixou desorientado. 😵", subtitulo: "E como esse abalado está te afetando nesse momento?" },
+        phrases: { titulo: "Abalado, algo te deixou desorientado.", subtitulo: "E como esse abalado está te afetando nesse momento?" },
         sub: ["Estimulado", "Tocado"]
     },
 
     "Estarrecido": {
         label: "Estarrecido",
-        phrases: { titulo: "Estarrecido, que choque inesperado! 😱", subtitulo: "E como isso faz você se sentir agora?" },
+        phrases: { titulo: "Estarrecido, que choque inesperado!", subtitulo: "E como isso faz você se sentir agora?" },
         sub: ["Surpreso (Sub)", "Descrente"] // "Surpreso (Sub)" para evitar conflito
     },
     "Alegria": {
         label: "Alegria",
-        icon: "😊",
-        phrases: { titulo: "Alegria, que coisa boa! 😄", subtitulo: "O que essa alegria está te fazendo sentir?" },
+        phrases: { titulo: "Alegria, que coisa boa!", subtitulo: "O que essa alegria está te fazendo sentir?" },
         sub: ["Feliz", "Satisfeito", "Animado", "Orgulhoso", "Otimista", "Entusiasmado", "Exaltado", "Encantado"]
     },
     "Feliz": {
         label: "Feliz",
-        phrases: { titulo: "Feliz, que coisa boa! 😄", subtitulo: "O que exatamente essa felicidade faz você sentir?" },
+        phrases: { titulo: "Feliz, que coisa boa!", subtitulo: "O que exatamente essa felicidade faz você sentir?" },
         sub: ["Divertido", "Deleite"]
     },
     "Satisfeito": {
         label: "Satisfeito",
-        phrases: { titulo: "Satisfeito, que sensação gostosa! 😊", subtitulo: "O que essa satisfação está gerando em você?" },
+        phrases: { titulo: "Satisfeito, que sensação gostosa!", subtitulo: "O que essa satisfação está gerando em você?" },
         sub: ["Gozo", "Saciado"]
     },
     "Animado": {
         label: "Animado",
-        phrases: { titulo: "Animado, cheio de energia! 🤩", subtitulo: "Como esse ânimo está te fazendo se sentir?" },
+        phrases: { titulo: "Animado, cheio de energia!", subtitulo: "Como esse ânimo está te fazendo se sentir?" },
         sub: ["Abençoado", "Jovial"] // "Otimista (Sub)" para evitar conflito
     },
     "Orgulhoso": {
         label: "Orgulhoso",
-        phrases: { titulo: "Orgulhoso, parabéns por isso! 😎", subtitulo: "O que esse orgulho provoca em você agora?" },
+        phrases: { titulo: "Orgulhoso, parabéns por isso!", subtitulo: "O que esse orgulho provoca em você agora?" },
         sub: ["Famoso", "Triunfante"]
     },
     "Otimista": {
         label: "Otimista",
-        phrases: { titulo: "Otimista, cheio de esperança! ☀️", subtitulo: "O que essa esperança traz para você nesse momento?" },
+        phrases: { titulo: "Otimista, cheio de esperança!", subtitulo: "O que essa esperança traz para você nesse momento?" },
         sub: ["Esperançoso", "Ansioso"]
     },
     "Entusiasmado": {
         label: "Entusiasmado",
-        phrases: { titulo: "Entusiasmado, energia lá em cima! 🔥", subtitulo: "E como esse entusiasmo faz você se sentir agora?" },
+        phrases: { titulo: "Entusiasmado, energia lá em cima!", subtitulo: "E como esse entusiasmo faz você se sentir agora?" },
         sub: ["Excitado", "Zelo"]
     },
     "Exaltado": {
         label: "Exaltado",
-        phrases: { titulo: "Exaltado, que momento incrível! ✨", subtitulo: "O que esse êxtase está te causando agora?" },
+        phrases: { titulo: "Exaltado, que momento incrível!", subtitulo: "O que esse êxtase está te causando agora?" },
         sub: ["Júbilo", "Euforia"]
     },
     "Encantado": {
         label: "Encantado",
-        phrases: { titulo: "Encantado, que maravilha! ✨", subtitulo: "O que esse encantamento está te causando agora?" },
+        phrases: { titulo: "Encantado, que maravilha!", subtitulo: "O que esse encantamento está te causando agora?" },
         sub: ["Êxtase", "Sedução"]
     },
     "Amor": {
         label: "Amor",
-        icon: "🥰",
-        phrases: { titulo: "Amor, que sensação maravilhosa! ❤️", subtitulo: "O que esse amor está te fazendo sentir?" },
+        phrases: { titulo: "Amor, que sensação maravilhosa!", subtitulo: "O que esse amor está te fazendo sentir?" },
         sub: ["Pacífico", "Afetuoso", "Desejoso", "Nostálgico", "Encantado"]
     },
     "Pacífico": {
         label: "Pacífico",
-        phrases: { titulo: "Pacífico, que conexão maravilhosa! 🤝", subtitulo: "O que essa amizade está gerando em você?" },
+        phrases: { titulo: "Pacífico, que conexão maravilhosa!", subtitulo: "O que essa amizade está gerando em você?" },
         sub: ["Pleno", "Liberdade"]
     },
     "Afetuoso": {
         label: "Afetuoso",
-        phrases: { titulo: "Afetuoso, é tão bom se sentir seguro. 🔐", subtitulo: "E como essa confiança te faz se sentir?" },
+        phrases: { titulo: "Afetuoso, é tão bom se sentir seguro.", subtitulo: "E como essa confiança te faz se sentir?" },
         sub: ["Compaixão", "Cuidado"]
     },
     "Desejoso": {
         label: "Desejoso",
-        phrases: { titulo: "Desejoso, que tranquilidade maravilhosa. 🕊️", subtitulo: "E como essa paz se reflete em você agora?" },
+        phrases: { titulo: "Desejoso, que tranquilidade maravilhosa.", subtitulo: "E como essa paz se reflete em você agora?" },
         sub: ["Fascínio", "Paixão"]
     },
     "Nostálgico": {
         label: "Nostálgico",
-        phrases: { titulo: "Nostálgico, acolher faz bem. 💖", subtitulo: "O que essa aceitação está gerando dentro de você?" },
+        phrases: { titulo: "Nostálgico, acolher faz bem.", subtitulo: "O que essa aceitação está gerando dentro de você?" },
         sub: ["Atração", "Sensível"]
     },
     "Encantado": {
         label: "Encantado",
-        phrases: { titulo: "Encantado, um gesto de amor e proteção. 💝", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
+        phrases: { titulo: "Encantado, um gesto de amor e proteção.", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
         sub: ["Romântico", "Carinho"]
     },
     "Medo": {
         label: "Medo",
-        icon: "😰",
-        phrases: { titulo: "Medo, opa... algo te deixou apreensivo 😨", subtitulo: "O que exatamente esse medo está te fazendo sentir?" },
+        phrases: { titulo: "Medo, opa... algo te deixou apreensivo", subtitulo: "O que exatamente esse medo está te fazendo sentir?" },
         sub: ["Horrorizado", "Inseguro", "Nervoso", "Assustado", "Aterrorizado", "Pânico (Sub)"] // "Pânico (Sub)" para evitar conflito
     },
     "Horrorizado": {
         label: "Horrorizado",
-        phrases: { titulo: "Horrorizado, algo muito assustador está acontecendo. 😱", subtitulo: "O que esse horror está te fazendo sentir agora?" },
+        phrases: { titulo: "Horrorizado, algo muito assustador está acontecendo.", subtitulo: "O que esse horror está te fazendo sentir agora?" },
         sub: ["Mortificado", "Pavor"]
     },
     "Inseguro": {
         label: "Inseguro",
-        phrases: { titulo: "Inseguro, parece que tudo balança... 😟", subtitulo: "E como essa insegurança te afeta agora?" },
+        phrases: { titulo: "Inseguro, parece que tudo balança...", subtitulo: "E como essa insegurança te afeta agora?" },
         sub: ["Inedequação", "Inferioridade"]
     },
     "Nervoso": {
         label: "Nervoso",
-        phrases: { titulo: "Nervoso, difícil manter o controle, né? 😬", subtitulo: "O que esse nervosismo provoca em você?" },
+        phrases: { titulo: "Nervoso, difícil manter o controle, né?", subtitulo: "O que esse nervosismo provoca em você?" },
         sub: ["Ansiedade", "Preocupação"]
     },
     "Assustado": {
         label: "Assustado",
-        phrases: { titulo: "Assustado, algo te deixou alerta. 😨", subtitulo: "E como esse medo está te afetando nesse momento?" },
+        phrases: { titulo: "Assustado, algo te deixou alerta.", subtitulo: "E como esse medo está te afetando nesse momento?" },
         sub: ["Abandono", "Amendrontado"]
     },
     "Aterrorizado": {
         label: "Aterrorizado",
-        phrases: { titulo: "Aterrorizado, isso parece muito intenso! 😱", subtitulo: "O que esse terror faz você sentir agora?" },
+        phrases: { titulo: "Aterrorizado, isso parece muito intenso!", subtitulo: "O que esse terror faz você sentir agora?" },
         sub: ["Histeria", "Pânico"]
     },
     "Pânico (Sub)": { // Chave ajustada
         label: "Pânico",
-        phrases: { titulo: "Pânico, parece que tudo fugiu do controle... 😵", subtitulo: "E como esse pânico está te impactando?" },
+        phrases: { titulo: "Pânico, parece que tudo fugiu do controle...", subtitulo: "E como esse pânico está te impactando?" },
         sub: ["Desespero (Sub2)", "Terror"] // "Desespero (Sub2)" para evitar conflito
     },
     // Emoções de Nível 3 (finais ou que não têm mais subníveis)

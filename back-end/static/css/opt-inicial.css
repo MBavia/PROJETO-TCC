@@ -107,18 +107,19 @@ body {
 }
 
 .intro-heading {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: #000000;
     margin-bottom: 1rem;
     animation: slideInUp 0.8s ease-out;
 }
 
 .intro-text {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--text-light);
+    font-weight: 400;
+    color: #000000;
     line-height: 1.4;
     animation: slideInUp 0.8s ease-out 0.2s both;
 }

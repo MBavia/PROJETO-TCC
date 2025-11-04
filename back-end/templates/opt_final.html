@@ -13,9 +13,9 @@
 </head>
 
 <body class="bg-white">
-    <main class="w-full max-w-xl p-8 flex flex-col items-center text-center">
+    <main class="w-full p-8 flex flex-col items-center text-center">
         
-        <div class="mb-10 w-full text-left">
+        <div class="mb-10 w-full text-center">
             <h1 class="text-custom-dark mb-2 text-h1-final">Muito bem! Agora dê o próximo passo</h1>
             <p class="text-p-final">
                 Converse com os nossos terapeutas para poder entender-se melhor!
@@ -24,11 +24,10 @@
 
         <div class="flex justify-center w-full mt-10">
             <a href="{{ url_for('selecao') }}"
-                class="w-48 h-48 card-ia-style rounded-xl flex flex-col items-center justify-center text-custom-dark cursor-pointer shadow-lg text-center p-4">
-                <div class="card-icon mb-2">
-                    <img src="{{ url_for('static', filename='images/IA.png') }}" alt="IA Icon" class="card-icon-img object-contain mx-auto" />
+                class="card-ia-style rounded-xl cursor-pointer relative overflow-hidden">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/IA.png') }}" alt="IA Icon" class="card-icon-img" />
                 </div>
-                <div class="text-lg font-semibold">IA</div>
             </a>
         </div>
         
