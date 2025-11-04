@@ -100,14 +100,15 @@ def get_user_chat(terapeuta_id='tcc'):
         app.logger.error(f"Erro ao criar chat Gemini para {session_id}: {e}", exc_info=True)
         raise
 
-# --- Rotas (sem alterações na lógica, apenas usando o app corrigido) ---
+# --- Rotas (MODIFICADAS) ---
 @app.route('/')
 def index():
     return render_template('opt-inicial.html')
 
-@app.route('/final')
-def final_page():
-    return render_template('subemocoes.html')
+# ROTA ANTIGA QUE NÃO SERÁ MAIS USADA, MANTIDA COMO FINAL_PAGE:
+@app.route('/final_page_antiga')
+def final_page_antiga():
+    return render_template('opt_final.html')
 
 @app.route('/selecao')
 def selecao():
@@ -121,8 +122,14 @@ def chat():
 def questionario():
     return render_template('questionario.html')
 
+@app.route('/opcoes_finais')
+def opcoes_finais():
+    # Rota que usa o opt_final.html (a tela com dois botões, se necessário)
+    return render_template('opt_final.html')
+    
 @app.route('/final')
-def final():
+def final_ia():
+    # Rota chamada ao concluir o questionário: exibe opções finais (IA)
     return render_template('opt_final.html')
 
 

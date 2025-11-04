@@ -4,40 +4,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fim do Questionário</title>
+    <title>Questionário Concluído</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/opt_final.css') }}">
 </head>
 
-<body>
-    <main class="min-h-screen bg-zinc-300 flex items-start justify-center flex-col p-8">
-        <div class="mb-10 ml-10">
-            <h1 class="text-[50px] mb-4">Certo!</h1>
-            <p class="text-[25px] font-light mb-10 w-full">
-                Agora escolha uma opção para continuar!
+<body class="bg-white">
+    <main class="w-full max-w-xl p-8 flex flex-col items-center text-center">
+        
+        <div class="mb-10 w-full text-left">
+            <h1 class="text-custom-dark mb-2 text-h1-final">Muito bem! Agora dê o próximo passo</h1>
+            <p class="text-p-final">
+                Converse com os nossos terapeutas para poder entender-se melhor!
             </p>
         </div>
 
-        <div class="flex justify-center gap-10 w-full mt-10">
+        <div class="flex justify-center w-full mt-10">
             <a href="{{ url_for('selecao') }}"
-                class="w-80 h-80 bg-gradient-to-br from-blue-600 to-blue-800 rounded-md flex flex-col items-center justify-center text-white hover:scale-105 transition-transform cursor-pointer shadow-lg text-center">
-                <div class="text-[35px] font-semibold">Conversar com IA</div>
-            </a>
-
-            <a href="#" onclick="alert('Funcionalidade de Recomendações em desenvolvimento!'); return false;"
-                class="w-80 h-80 bg-gradient-to-br from-gray-500 to-gray-700 rounded-md flex flex-col items-center justify-center text-white hover:scale-105 transition-transform cursor-pointer shadow-lg text-center">
-                <div class="text-[35px] font-semibold">Recomendações</div>
+                class="w-48 h-48 card-ia-style rounded-xl flex flex-col items-center justify-center text-custom-dark cursor-pointer shadow-lg text-center p-4">
+                <div class="card-icon mb-2">
+                    <img src="{{ url_for('static', filename='images/IA.png') }}" alt="IA Icon" class="card-icon-img object-contain mx-auto" />
+                </div>
+                <div class="text-lg font-semibold">IA</div>
             </a>
         </div>
-
-        <a href="{{ url_for('questionario') }}" id="back-button" class="back-button">
-            <svg class="back-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="back-text">Voltar</span>
-        </a>
+        
     </main>
-    
-    </body>
+</body>
 
 </html>

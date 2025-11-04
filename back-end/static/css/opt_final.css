@@ -1,98 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+/* Importação das fontes necessárias */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
 
+/* --- Estilos Gerais (Adaptados) --- */
 body {
-            font-family: 'Handlee', cursive;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column; /* Para alinhar o título e os cards */
-        }
+    font-family: 'Roboto', sans-serif; /* Usando Roboto para o novo texto */
+    background-color: #ffffff; /* Fundo branco do novo layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; 
+    margin: 0;
+}
 
-        .container {
-            border: 2px solid #333;
-            border-radius: 15px;
-            padding: 30px;
-            background-color: #fff;
-            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px; /* Espaçamento entre os cards */
-        }
+/* --- ESTILOS ESPECÍFICOS PARA O NOVO LAYOUT DE CONCLUSÃO (Muito bem!) --- */
+.text-custom-dark {
+    color: #334155; /* Cor escura do projeto */
+}
 
-        .header-title {
-            position: absolute;
-            top: -20px;
-            background-color: #fff;
-            padding: 0 10px;
-            font-size: 1.1rem;
-            color: #555;
-            text-align: center;
-            width: fit-content;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+/* Títulos do Novo Layout */
+.text-h1-final {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
 
-        .card {
-            border: 2px solid #333;
-            border-radius: 10px;
-            min-height: 150px; /* Maior para esta página */
-            width: 80%; /* Ocupa mais largura */
-            max-width: 300px; /* Limite de largura */
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem; /* Fonte maior */
-            font-weight: bold;
-            color: #333;
-            transition: transform 0.2s, box-shadow 0.2s;
-            background-color: #f8f8f8;
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            padding: 20px;
-        }
+.text-p-final {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #64748b;
+}
 
-        .card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
-        }
+/* Estilo do Card IA (Estas regras não são mais necessárias pois foram movidas para o HTML <style>) */
+.card-ia-style {
+    background-color: transparent;
+    border: 1px solid #e2e8f0; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-        .info-message {
-            margin-bottom: 30px;
-            font-size: 1.2rem;
-            color: #555;
-            text-align: center;
-        }
+.card-ia-style:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .back-button-final {
-            background-color: #60a5fa; /* Azul mais claro */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
-            border: 2px solid #333;
-        }
-        
-        .back-button-final:hover {
-            background-color: #3b82f6;
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
-        }
+.card-icon-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
 
-/* -- Botão de Voltar Moderno -- */
+
+/* --- Botão de Voltar (Mantido para navegação) --- */
 .back-button {
     position: absolute;
     top: 1.5rem;
@@ -133,7 +91,7 @@ body {
 }
 
 .back-text {
-    font-family: 'Handlee', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 

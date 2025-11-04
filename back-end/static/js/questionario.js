@@ -69,6 +69,7 @@ const emotionsData = {
     },
     "Surpresa": {
         label: "Surpresa",
+        icon: "😲",
         phrases: { titulo: "Surpresa, uau! Isso foi inesperado 😲", subtitulo: "O que essa surpresa está te fazendo sentir?" },
         sub: ["Atortoamento", "Confusão", "Espanto", "Superação", "Abalado"] // "Perplexo (Sub)" para evitar conflito
     },
@@ -275,7 +276,7 @@ const emotionsData = {
     "Tolerante": { label: "Tolerante", finalPhrase: "Você se sente tolerante" },
     "Compreensivo": { label: "Compreensivo", finalPhrase: "Você está compreensivo" },
     "Protetor": { label: "Protetor", finalPhrase: "Você se sente protetor" },
-    "Carinhoso": { label: "Carinhoso", finalPhrase: "Você se sente carinhoso" },
+    "Carinhoso": { label: "Carinho", finalPhrase: "Você se sente carinhoso" },
     "Apreensão": { label: "Apreensão", finalPhrase: "Você sente apreensão" },
     "Preocupação": { label: "Preocupação", finalPhrase: "Você sente preocupação" },
     "Vulnerável": { label: "Vulnerável", finalPhrase: "Você se sente vulnerável" },
@@ -321,8 +322,8 @@ const emotionsData = {
     "Inedequação": { label: "Inedequação", finalPhrase: "Você se sente inedequação"},
     "Inferioridade": { label: "Inferioridade", finalPhrase: "Você se sente inferioridade"},
     "Ansiedade": { label: "Ansiedade", finalPhrase: "Você se sente ansiedade"},
-    "Preocupação": { label: "Preocupação", finalPhrase: "Você se sente preocupação"},
-    "Estimulado": { label: "Estimulado", finalPhrase: "Você se sente estimulado"},
+    "Preocupação": { label: "Preocupação", finalPhrase: "Você sente preocupação"},
+    "Estimulado": { label: "Estimulado", finalPhrase: "Você está estimulado"},
     "Chocado": { label: "Chocado", finalPhrase: "Você se sente chocado"},
     "Desiludido": { label: "Desiludido", finalPhrase: "Você se sente desiludido"},
     "Perplexo": { label: "Perplexo", finalPhrase: "Você se sente perplexo"},
@@ -335,7 +336,7 @@ const emotionsData = {
 // Referências aos elementos do DOM
 const firstLayer = document.getElementById('first-layer');
 const dynamicLayer = document.getElementById('dynamic-layer'); // Nova ID para a camada de subemoções
-const finalLayer = document.getElementById('final-layer');
+const finalLayer = document.getElementById('final-layer'); // ESTE SERÁ ESCONDIDO OU IGNORADO
 const mainTitle = document.querySelector('.main-title');
 const subtitle = document.querySelector('.subtitle');
 const backButton = document.querySelector('.back-button');
@@ -413,10 +414,29 @@ function handleCardClick(clickedEmotionKey) {
         // Se a emoção clicada tem subníveis, exibe a camada dinâmica com esses subníveis
         displayLayer('dynamic', clickedEmotionKey);
     } else {
-        // Se não tem mais subníveis, exibe a camada final
-        displayLayer('final', clickedEmotionKey);
+        // Se não tem mais subníveis (É O FINAL), salva e redireciona.
+        handleFinalSelection(clickedEmotionKey);
     }
 }
+
+/**
+ * Lida com a seleção final de uma emoção.
+ * @param {string} finalEmotionKey - A chave da emoção final selecionada.
+ */
+function handleFinalSelection(finalEmotionKey) {
+    const finalEmotionData = emotionsData[finalEmotionKey];
+    if (finalEmotionData && finalEmotionData.finalPhrase) {
+        // 1. Salva a emoção final no localStorage
+        localStorage.setItem('sentimentoFinalSelecionado', finalEmotionData.finalPhrase);
+        // 2. Redireciona o usuário para a rota '/final'
+        window.location.href = '/final'; 
+    } else {
+        console.error("Erro: Dados da emoção final não encontrados ou 'finalPhrase' ausente.");
+        // Fallback para a primeira camada
+        displayLayer('first');
+    }
+}
+
 
 /**
  * Exibe a camada especificada e renderiza o conteúdo apropriado.
@@ -427,7 +447,7 @@ function displayLayer(layerName, currentEmotionKey = null) {
     // Esconde todas as camadas primeiro
     firstLayer.classList.add('hidden');
     dynamicLayer.classList.add('hidden');
-    finalLayer.classList.add('hidden');
+    // finalLayer.classList.add('hidden'); // O finalLayer (tela antiga) não é mais manipulado aqui
 
     // Remove classes de grid para resetar antes de aplicar as corretas
     dynamicLayer.classList.remove('emotion-grid', 'options-grid');
@@ -441,12 +461,7 @@ function displayLayer(layerName, currentEmotionKey = null) {
             mainTitle.textContent = 'Diga-me';
             subtitle.textContent = 'Qual sua emoção predominante hoje?';
             backButton.classList.add('hidden'); // Botão de voltar escondido na primeira camada
-
-            // Renderiza as emoções principais (sem ícones explícitos no JS, pegando do HTML)
-            // Para a camada inicial, vamos manter os cards HTML estáticos para aproveitar as cores e classes existentes.
-            // Alternativamente, poderíamos gerá-los aqui, mas o seu HTML já os tem bem definidos.
-            // Se você quiser que a PRIMEIRA camada também seja 100% dinâmica, me avise!
-            // Por enquanto, só vamos mostrar a camada.
+            // A camada inicial usa os cards estáticos do HTML.
             break;
         case 'dynamic':
             if (currentEmotionData) {
@@ -462,17 +477,7 @@ function displayLayer(layerName, currentEmotionKey = null) {
             }
             break;
         case 'final':
-            if (currentEmotionData) {
-                finalLayer.classList.remove('hidden');
-                mainTitle.textContent = "Sua emoção final"; // Título genérico para a camada final
-                subtitle.textContent = "Entendido!"; // Subtítulo genérico
-                backButton.classList.remove('hidden');
-                finalEmotionDisplay.textContent = currentEmotionData.finalPhrase || `Você se sente ${currentEmotionData.label}`;
-                localStorage.setItem('sentimentoFinalSelecionado', finalEmotionDisplay.textContent);
-            } else {
-                console.error("Dados da emoção não encontrados para a camada final.");
-                displayLayer('first');
-            }
+            // Lógica de camada final agora é um REDIRECIONAMENTO em handleFinalSelection
             break;
     }
 }
@@ -492,7 +497,7 @@ function handleBackClick() {
 }
 
 /**
- * Gerencia o clique no botão "Reiniciar Quiz".
+ * Gerencia o clique no botão "Reiniciar Quiz" (Só será usado na página final, se necessário).
  */
 function handleResetQuiz() {
     currentPath = [];
@@ -513,9 +518,6 @@ document.querySelectorAll('.emotion-card[data-emotion]').forEach(card => {
 
 // Listener para o botão Voltar
 backButton.addEventListener('click', handleBackClick);
-
-// Listener para o botão Reiniciar Quiz
-resetButton.addEventListener('click', handleResetQuiz);
 
 // Inicializa a exibição na primeira camada ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
