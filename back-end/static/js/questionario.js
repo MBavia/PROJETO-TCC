@@ -3,32 +3,32 @@ const emotionsData = {
     "Raiva": {
         label: "Raiva",
         phrases: { titulo: "Raiva, uau! Isso te deixou irritado", subtitulo: "O que exatamente essa raiva está te fazendo sentir?" },
-        sub: ["Frustração", "Inveja", "Irritação", "Exasperado", "Fúria"]
+        sub: ["Furioso", "Exasperado", "Irritado", "Inveja", "Desgosto"]
     },
-    "Frustração": {
-        label: "Frustração",
-        phrases: { titulo: "Frustração, que coisa chata!", subtitulo: "O que exatamente essa frustração está te fazendo sentir?" },
-        sub: ["Agridido", "Indignado"]
-    },
-    "Inveja": {
-        label: "Inveja",
-        phrases: { titulo: "Inveja, isso está te incomodando, né?", subtitulo: "O que essa inveja está te fazendo sentir?" },
-        sub: ["Ciumento", "Rancoroso"]
-    },
-    "Irritação": {
-        label: "Irritação",
-        phrases: { titulo: "Irritação, que desconforto!", subtitulo: "O que exatamente essa irritação provoca em você?" },
-        sub: ["Aborrecido", "Crítico", "Zangado"]
+    "Furioso": {
+        label: "Furioso",
+        phrases: { titulo: "Furioso, isso é realmente intenso!", subtitulo: "O que essa fúria está te fazendo sentir agora?" },
+        sub: ["Hostilidade", "Ódio"]
     },
     "Exasperado": {
         label: "Exasperado",
-        phrases: { titulo: "Exasperado, parece que tudo está demais!", subtitulo: "Como isso está te fazendo se sentir agora?" },
-        sub: ["Irritado (Sub)", "Amargurado"] // "Irritado (Sub)" para evitar conflito com "Irritação" principal
+        phrases: { titulo: "Exasperado, parece que algo te frustrou bastante.", subtitulo: "E como essa exasperação está te afetando nesse momento?" },
+        sub: ["Agitação", "Frustração"]
     },
-    "Fúria": {
-        label: "Fúria",
-        phrases: { titulo: "Fúria, está queimando aí dentro, né?", subtitulo: "O que essa fúria está te causando nesse momento?" },
-        sub: ["Furioso", "Agressivo"]
+    "Irritado": {
+        label: "Irritado",
+        phrases: { titulo: "Irritado, difícil manter a calma, né?", subtitulo: "O que essa irritação provoca em você?" },
+        sub: ["Provocação", "Irritação (Sub)"]
+    },
+    "Inveja": {
+        label: "Inveja",
+        phrases: { titulo: "Inveja, que sentimento complicado...", subtitulo: "O que essa inveja está te fazendo sentir agora?" },
+        sub: ["Ressentido", "Ciúmes"]
+    },
+    "Desgosto": {
+        label: "Desgosto",
+        phrases: { titulo: "Desgosto, algo realmente te desagradou.", subtitulo: "E como esse desgosto está te afetando nesse momento?" },
+        sub: ["Desespero", "Revoltado"]
     },
     "Tristeza": {
         label: "Tristeza",
@@ -345,8 +345,18 @@ const emotionsData = {
     "Apaixonado": { label: "Apaixonado", finalPhrase: "Você se sente apaixonado"},
     "Admirado": { label: "Admirado", finalPhrase: "Você se sente admirado"},
     "Enamordecido": { label: "Enamordecido", finalPhrase: "Você se sente enamordecido"},
-    "Encantado": { label: "Encantado", finalPhrase: "Você se sente encantado"}
-    
+    "Encantado": { label: "Encantado", finalPhrase: "Você se sente encantado"},
+    "Ódio": { label: "Ódio", finalPhrase: "Você sente ódio" },
+    "Hostilidade": { label: "Hostilidade", finalPhrase: "Você sente hostilidade" },
+    "Agitação": { label: "Agitação", finalPhrase: "Você sente agitação" },
+    "Frustração": { label: "Frustração", finalPhrase: "Você sente frustração" },
+    "Provocação": { label: "Provocação", finalPhrase: "Você sente provocação" },
+    "Irritação (Sub)": { label: "Irritação", finalPhrase: "Você sente irritação" },
+    "Ressentido": { label: "Ressentido", finalPhrase: "Você se sente ressentido" },
+    "Ciúmes": { label: "Ciúmes", finalPhrase: "Você sente ciúmes" },
+    "Desespero": { label: "Desespero", finalPhrase: "Você sente desespero" },
+    "Revoltado": { label: "Revoltado", finalPhrase: "Você se sente revoltado" },
+
     
     
 };

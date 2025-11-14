@@ -1058,6 +1058,42 @@ body {
     color: #ffffff;
 }
 
+.sub.emotion-card.raiva-furioso {
+    background-image: url('../images/FURIOSO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub.emotion-card.raiva-irritado {
+    background-image: url('../images/IRRITADO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub.emotion-card.raiva-exasperado {
+    background-image: url('../images/EXASPERADO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub.emotion-card.raiva-inveja {
+    background-image: url('../images/INVEJA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub.emotion-card.raiva-desgosto {
+    background-image: url('../images/DESGOSTO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
 
 /* --- Botão de Voltar (Garantir estilo e posição) --- */
 .back-button {
