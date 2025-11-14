@@ -1086,34 +1086,7 @@ body {
     left: 100%;
 }
 
-/* --- Botão de Voltar da Página (Existente) --- */
-.back-button {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.3rem 0.7rem;
-    background-color: var(--card-bg);
-    border: 2px solid var(--tristeza-color);
-    border-radius: 50px;
-    text-decoration: none;
-    color: var(--tristeza-color);
-    font-weight: 500;
-    font-size: 0.8rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-subtle);
-    backdrop-filter: blur(10px);
-    z-index: 50;
-}
 
-.back-button:hover {
-    background-color: var(--tristeza-color);
-    color: white;
-    transform: translateX(-5px);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-}
 
 /* --- Botões de Navegação do Quiz (Novos) --- */
 .quiz-button {

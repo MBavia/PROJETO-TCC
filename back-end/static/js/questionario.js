@@ -542,8 +542,6 @@ document.querySelectorAll('.emotion-card[data-emotion]').forEach(card => {
     });
 });
 
-// Listener para o botão Voltar
-backButton.addEventListener('click', handleBackClick);
 
 // Inicializa a exibição na primeira camada ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
