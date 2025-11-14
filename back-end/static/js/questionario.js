@@ -33,52 +33,63 @@ const emotionsData = {
     "Tristeza": {
         label: "Tristeza",
         phrases: { titulo: "Tristeza, que pena!", subtitulo: "O que essa tristeza está te fazendo sentir?" },
-        sub: ["Sofrimento", "Vergonha", "Desapontamento", "Remorso", "Desespero (Sub)", "Depressão"] // "Desespero (Sub)" para evitar conflito
+        sub: ["Sofrimento", "Tristeza (Sub)", "Desapontamento", "Vergonha", "Negligência", "Desespero", "Culpa", "Isolamento", "Luto", "Impotência"]
     },
     "Sofrimento": {
         label: "Sofrimento",
         phrases: { titulo: "Sofrimento, sinto muito por isso.", subtitulo: "O que exatamente esse sofrimento faz você sentir?" },
-        sub: ["Angústia", "Agonia"]
+        sub: ["Agoniado", "Machucado", "Depressão", "Pesar", "Consternado", "Desagradado", "Arrependimento"]
+    },
+    "Tristeza": {
+        label: "Tristeza",
+        phrases: { titulo: "Tristeza, que sensação difícil...", subtitulo: "O que essa tristeza está te fazendo sentir agora?" },
+        sub: ["Sofrimento", "Tristeza", "Desapontamento", "Vergonha", "Negligência", "Desespero"]
+    },
+    "Negligência": {
+        label: "Negligência",
+        phrases: { titulo: "Negligência, parece que algo foi esquecido...", subtitulo: "Como essa negligência está te afetando?" },
+        sub: ["Solitário", "Isolamento"]
+    },
+    "Desespero": {
+        label: "Desespero",
+        phrases: { titulo: "Desespero, quando tudo parece perdido...", subtitulo: "Como esse desespero está te impactando nesse momento?" },
+        sub: ["Impotência", "Luto"]
     },
     "Vergonha": {
         label: "Vergonha",
         phrases: { titulo: "Vergonha, que sensação difícil...", subtitulo: "Como essa vergonha está te afetando nesse momento?" },
-        sub: ["Culpa", "Humilhação"]
+        sub: ["Arrependimento", "Culpa"]
     },
     "Desapontamento": {
         label: "Desapontamento",
         phrases: { titulo: "Desapontamento, poxa... que pena.", subtitulo: "E como esse desapontamento faz você se sentir agora?" },
-        sub: ["Desanimado", "Desiludido"]
+        sub: ["Costernado", "Desagradado"]
     },
-    "Remorso": {
-        label: "Remorso",
-        phrases: { titulo: "Remorso, quando o passado pesa...", subtitulo: "O que esse remorso faz você sentir agora?" },
-        sub: ["Arrependimento", "Culpa Profunda"]
+    "Tristeza (Sub)": {
+        label: "Tristeza",
+        phrases: { titulo: "Tristeza, que sensação difícil...", subtitulo: "O que essa tristeza está te fazendo sentir agora?" },
+        sub: ["Depressão", "Pesar"]
     },
-    "Desespero (Sub)": { // Chave ajustada
-        label: "Desespero",
-        phrases: { titulo: "Desespero, quando tudo parece perdido...", subtitulo: "Como esse desespero está te impactando nesse momento?" },
-        sub: ["Impotência", "Desesperança"]
+    "Sofrimento": {
+        label: "Sofrimento",
+        phrases: { titulo: "Sofrimento, sinto muito por isso.", subtitulo: "O que exatamente esse sofrimento faz você sentir?" },
+        sub: ["Agoniado", "Machucado"]
     },
-    "Depressão": {
-        label: "Depressão",
-        phrases: { titulo: "Depressão, parece que está pesado demais...", subtitulo: "E como essa depressão faz você se sentir?" },
-        sub: ["Vazio", "Pesado"]
-    },
+    
     "Surpresa": {
         label: "Surpresa",
         phrases: { titulo: "Surpresa, uau! Isso foi inesperado", subtitulo: "O que essa surpresa está te fazendo sentir?" },
-        sub: ["Atortoamento", "Confusão", "Espanto", "Superação", "Abalado"] // "Perplexo (Sub)" para evitar conflito
+        sub: ["Atortoamento (Sub)", "Confusão (Sub)", "Espanto", "Superação", "Abalado"]
     },
-    "Atortoamento": {
+    "Atortoamento (Sub)": {
         label: "Atortoamento",
         phrases: { titulo: "Atortoamento, algo te deixou desorientado.", subtitulo: "E como esse atortoamento está te afetando nesse momento?" },
         sub: ["Consternado", "Chocado"]
     },
-    "Confusão": {
+    "Confusão (Sub)": {
         label: "Confusão",
         phrases: { titulo: "Confusão, tudo parece meio bagunçado, né?", subtitulo: "O que exatamente essa confusão faz você sentir?" },
-        sub: ["Desiludido", "Perplexo"] // "Perplexo (Sub2)" para evitar conflito
+        sub: ["Desiludido", "Perplexo"]
     },
     "Espanto": {
         label: "Espanto",
@@ -149,7 +160,7 @@ const emotionsData = {
     "Amor": {
         label: "Amor",
         phrases: { titulo: "Amor, que sensação maravilhosa!", subtitulo: "O que esse amor está te fazendo sentir?" },
-        sub: ["Pacífico", "Afetuoso", "Desejoso", "Nostálgico", "Encantado"]
+        sub: ["Pacífico", "Afetuoso", "Desejoso", "Nostálgico", "Encantado (Amor)"]
     },
     "Pacífico": {
         label: "Pacífico",
@@ -171,7 +182,7 @@ const emotionsData = {
         phrases: { titulo: "Nostálgico, acolher faz bem.", subtitulo: "O que essa aceitação está gerando dentro de você?" },
         sub: ["Atração", "Sensível"]
     },
-    "Encantado": {
+    "Encantado (Amor)": {
         label: "Encantado",
         phrases: { titulo: "Encantado, um gesto de amor e proteção.", subtitulo: "E como esse cuidado está te fazendo se sentir agora?" },
         sub: ["Romântico", "Carinho"]
@@ -221,6 +232,15 @@ const emotionsData = {
     "Agressivo": { label: "Agressivo", finalPhrase: "Você está agressivo" },
     "Angústia": { label: "Angústia", finalPhrase: "Você sente angústia" },
     "Agonia": { label: "Agonia", finalPhrase: "Você sente agonia" },
+    "Agoniado": { label: "Agoniado", finalPhrase: "Você se sente agoniado" },
+    "Machucado": { label: "Machucado", finalPhrase: "Você se sente machucado" },
+    "Pesar": { label: "Pesar", finalPhrase: "Você sente pesar" },
+    "Desagradado": { label: "Desagradado", finalPhrase: "Você se sente desagradado" },
+    "Solitário": { label: "Solitário", finalPhrase: "Você se sente solitário" },
+    "Negligência": { label: "Negligência", finalPhrase: "Você se sente negligenciado" },
+    "Desespero": { label: "Desespero", finalPhrase: "Você sente desespero" },
+    "Isolamento": { label: "Isolamento", finalPhrase: "Você se sente isolado" },
+    "Luto": { label: "Luto", finalPhrase: "Você está em luto" },
     "Culpa": { label: "Culpa", finalPhrase: "Você se sente culpado" },
     "Humilhação": { label: "Humilhação", finalPhrase: "Você se sente humilhado" },
     "Desanimado": { label: "Desanimado", finalPhrase: "Você se sente desanimado" },
@@ -277,7 +297,6 @@ const emotionsData = {
     "Assombrado": { label: "Assombrado", finalPhrase: "Você se sente assombrado" },
     "Horrorizado": { label: "Horrorizado", finalPhrase: "Você está horrorizado" },
     "Pavor": { label: "Pavor", finalPhrase: "Você sente pavor" },
-    "Desespero (Sub2)": { label: "Desespero", finalPhrase: "Você sente desespero" },
     "Terror": { label: "Terror", finalPhrase: "Você sente terror" },
     "Deleite": { label: "Deleite", finalPhrase: "Você se sente deleite"},
     "Gozo": { label: "Gozo", finalPhrase: "Você se sente gozo"},
@@ -315,6 +334,7 @@ const emotionsData = {
     "Preocupação": { label: "Preocupação", finalPhrase: "Você sente preocupação"},
     "Estimulado": { label: "Estimulado", finalPhrase: "Você está estimulado"},
     "Chocado": { label: "Chocado", finalPhrase: "Você se sente chocado"},
+    "Consternado": { label: "Consternado", finalPhrase: "Você se sente consternado"},
     "Desiludido": { label: "Desiludido", finalPhrase: "Você se sente desiludido"},
     "Perplexo": { label: "Perplexo", finalPhrase: "Você se sente perplexo"},
     "Atônito": { label: "Atônito", finalPhrase: "Você se sente atônito"},
@@ -387,8 +407,16 @@ function renderCards(parentElement, emotionKeys, isSubemotion = false) {
 
             // Adiciona uma classe específica combinando emoção-pai e subemoção (ex.: sub-alegria-feliz)
             const parentKey = currentPath[currentPath.length - 1] || '';
-            const normalizedParent = String(parentKey).toLowerCase().replace(/\s|\(|\)/g, '');
-            const normalizedKey = String(key).toLowerCase().replace(/\s|\(|\)/g, '');
+            // Função para normalizar removendo acentos e caracteres especiais
+            const normalizeString = (str) => {
+                return String(str).toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+                    .replace(/\s|\(|\)|sub\)/gi, '') // Remove espaços, parênteses e "(Sub)"
+                    .replace(/\(sub2\)/gi, ''); // Remove "(Sub2)"
+            };
+            const normalizedParent = normalizeString(parentKey);
+            const normalizedKey = normalizeString(key);
             if (normalizedParent && normalizedKey) {
                 card.classList.add(`sub-${normalizedParent}-${normalizedKey}`);
             }

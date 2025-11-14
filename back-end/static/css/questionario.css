@@ -508,8 +508,8 @@ body {
     color: #ffffff;
 }
 
-/* Sub-sub cards de 'Amor' */
-.sub-amor-pacífico {
+/* Sub cards de 'Amor' */
+.sub-amor-pacifico {
     background-image: url('../images/pacifico.png');
     background-size: cover;
     background-position: center;
@@ -517,21 +517,6 @@ body {
     color: #ffffff;
 }
 
-.sub-amor-pleno {
-    background-image: url('../images/pleno.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-
-.sub-amor-liberdade {
-    background-image: url('../images/liberdade.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
 .sub-amor-afetuoso {
     background-image: url('../images/afetuoso.png');
     background-size: cover;
@@ -548,7 +533,7 @@ body {
     color: #ffffff;
 }
 
-.sub-amor-nostálgico {
+.sub-amor-nostalgico {
     background-image: url('../images/nostalgico.png');
     background-size: cover;
     background-position: center;
@@ -556,7 +541,7 @@ body {
     color: #ffffff;
 }
 
-.sub-amor-encantado {
+.sub-amor-encantadoamor {
     background-image: url('../images/encantado.png');
     background-size: cover;
     background-position: center;
@@ -566,7 +551,7 @@ body {
 
 /* Sub-sub cards do grupo 'Amor' */
 /* Pacífico -> Pleno | Liberdade */
-.sub-pacífico-pleno {
+.sub-pacifico-pleno {
     background-image: url('../images/pleno.png');
     background-size: cover;
     background-position: center;
@@ -574,7 +559,7 @@ body {
     color: #ffffff;
 }
 
-.sub-pacífico-liberdade {
+.sub-pacifico-liberdade {
     background-image: url('../images/liberdade.png');
     background-size: cover;
     background-position: center;
@@ -583,7 +568,8 @@ body {
 }
 
 /* Afetuoso -> Compaixão | Cuidado */
-.sub-afetuoso-compaixão {
+.sub-afetuoso-compaxao,
+.sub-afetuoso-compaixao {
     background-image: url('../images/compaixao.png');
     background-size: cover;
     background-position: center;
@@ -600,7 +586,7 @@ body {
 }
 
 /* Desejoso -> Fascínio | Paixão */
-.sub-desejoso-fascínio {
+.sub-desejoso-fascinio {
     background-image: url('../images/facinio.png');
     background-size: cover;
     background-position: center;
@@ -608,7 +594,7 @@ body {
     color: #ffffff;
 }
 
-.sub-desejoso-paixão {
+.sub-desejoso-paixao {
     background-image: url('../images/paixao.png');
     background-size: cover;
     background-position: center;
@@ -617,31 +603,33 @@ body {
 }
 
 /* Nostálgico -> Atração | Sensível */
-.sub-nostálgico-atração {
+.sub-nostalgico-atracao {
     background-image: url('../images/atracao.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.sub-encantado-romântico {
+
+.sub-nostalgico-sensivel {
+    background-image: url('../images/sensivel.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Encantado (Amor) -> Romântico | Carinho */
+.sub-encantadoamor-romantico {
     background-image: url('../images/romantico.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.sub-encantado-carinho {
+
+.sub-encantadoamor-carinho {
     background-image: url('../images/carinho.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-
-
-.sub-nostálgico-sensível {
-    background-image: url('../images/sensivel.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -704,7 +692,371 @@ body {
     color: #ffffff;
 }
 
+/* Sub-sub cards de 'Atortoamento' */
+.sub-atortoamento-consternado {
+    background-image: url('../images/consternado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
 
+.sub-atortoamento-chocado {
+    background-image: url('../images/chocado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Confusão' */
+.sub-confusao-desiludido {
+    background-image: url('../images/desiludido.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-confusao-perplexo {
+    background-image: url('../images/perplexo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Espanto' */
+.sub-espanto-atonito {
+    background-image: url('../images/atônito.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-espanto-impressionado {
+    background-image: url('../images/impressionado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Superação' */
+.sub-superacao-espanto {
+    background-image: url('../images/espanto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-superacao-sempalavras {
+    background-image: url('../images/SemPalavras.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Abalado' */
+.sub-abalado-estimulado {
+    background-image: url('../images/estimulado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-abalado-tocado {
+    background-image: url('../images/Tocado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub cards de 'Medo' */
+.sub-medo-horrorizado {
+    background-image: url('../images/horrorizado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-medo-nervoso {
+    background-image: url('../images/nervoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-medo-inseguro {
+    background-image: url('../images/inseguro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-medo-aterrorizado {
+    background-image: url('../images/aterrorizado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-medo-assustado {
+    background-image: url('../images/assustado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Horrorizado' */
+.sub-horrorizado-mortificado {
+    background-image: url('../images/Desespero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-horrorizado-pavor {
+    background-image: url('../images/aterrorizado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Inseguro' */
+.sub-inseguro-inedequacao {
+    background-image: url('../images/inseguro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-inseguro-inferioridade {
+    background-image: url('../images/inferioridade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Nervoso' */
+.sub-nervoso-ansiedade {
+    background-image: url('../images/nervoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-nervoso-preocupacao {
+    background-image: url('../images/nervoso.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Assustado' */
+.sub-assustado-abandono {
+    background-image: url('../images/abandono.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-assustado-amendrontado {
+    background-image: url('../images/amedrontamento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Aterrorizado' */
+.sub-aterrorizado-histeria {
+    background-image: url('../images/histeria.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-aterrorizado-panico {
+    background-image: url('../images/panico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub cards de 'Tristeza' */
+.sub-tristeza-sofrimento {
+    background-image: url('../images/Sofrimento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-tristezasub {
+    background-image: url('../images/img5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-desapontamento {
+    background-image: url('../images/Desapontamento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-vergonha {
+    background-image: url('../images/Vergonha.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-negligencia {
+    background-image: url('../images/Negligencia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-desespero {
+    background-image: url('../images/Desespero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-culpa {
+    background-image: url('../images/img5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-isolamento {
+    background-image: url('../images/isolamento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-luto {
+    background-image: url('../images/Luto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristeza-impotencia {
+    background-image: url('../images/impotencia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Sofrimento' */
+.sub-sofrimento-agoniado {
+    background-image: url('../images/agoniado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-machucado {
+    background-image: url('../images/machucado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-depressao {
+    background-image: url('../images/depressao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-pesar {
+    background-image: url('../images/pesar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-consternado {
+    background-image: url('../images/consternado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-desagradado {
+    background-image: url('../images/desagradado.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-sofrimento-arrependimento {
+    background-image: url('../images/arrependimento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Tristeza (Sub)' */
+.sub-tristezasub-solitario {
+    background-image: url('../images/solitario.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.sub-tristezasub-luto {
+    background-image: url('../images/Luto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
 
 
 
