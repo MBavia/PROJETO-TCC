@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <a href="{{ url_for('index') }}" class="back-button">
+    <a href="#" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
         <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
-        
+        <span class="back-text">Voltar</span>
     </a>
 
     <div class="container">
@@ -54,12 +54,7 @@
             </div>
         </div>
 
-		<!-- Seção 'Detalhes de Amor' removida -->
-
-
-
-
-        <div id="final-layer" class="layer hidden">
+		<div id="final-layer" class="layer hidden">
             <div class="final-card">
                 <p><span id="final-emotion-display"></span></p>
             </div>
@@ -73,12 +68,6 @@
             <div class="emotion-text"></div>
         </div>
     </template>
-    <div class="back-button">
-    <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-    </svg>
-    
-</div>
 
     <script src="{{ url_for('static', filename='js/questionario.js') }}"></script>
 

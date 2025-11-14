@@ -1059,6 +1059,73 @@ body {
 }
 
 
+/* --- Botão de Voltar (Garantir estilo e posição) --- */
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #60a5fa;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #60a5fa;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.back-button:hover {
+    background-color: #60a5fa;
+    color: white;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.back-button:active {
+    transform: translateX(-3px) scale(0.98);
+}
+
+.back-arrow {
+    width: 24px; /* Ajuste para ter tamanho visível */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-2px);
+}
+
+.back-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* -- Responsividade para o botão -- */
+@media (max-width: 768px) {
+    .back-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .back-text {
+        display: none;
+    }
+    
+    .back-button:hover .back-arrow {
+        transform: translateX(-1px);
+    }
+}
+
+
 
 
 .emotion-card.subemotion-card:hover {

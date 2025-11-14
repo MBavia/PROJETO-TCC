@@ -7,9 +7,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* gray-300 */
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* gray-400 */
+        }
+        /* ESTILOS ADICIONADOS PARA O BOTÃO VOLTAR */
+        .back-button {
+            position: fixed; /* Usar fixed para garantir que fique no viewport, sobrepondo o card principal */
+            top: 1.5rem;
+            left: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            border: 2px solid #3b82f6; /* Azul */
+            border-radius: 50px;
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 50; /* Garantir que fique acima de outros elementos */
+        }
+        .back-button:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        .back-button:active {
+            transform: translateX(-3px) scale(0.98);
+        }
+        .back-arrow {
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 768px) {
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.75rem;
+            }
+            .back-text {
+                display: none;
+            }
+        }
+        /* FIM DOS ESTILOS ADICIONADOS */
+    </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <a href="#" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
+        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="back-text">Voltar</span>
+    </a>
 
     <div class="flex w-full max-w-6xl h-[90vh] bg-white shadow-xl rounded-lg overflow-hidden">
 
@@ -79,20 +145,5 @@
 
     <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
     
-    <style>
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* gray-300 */
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* gray-400 */
-        }
-    </style>
 </body>
 </html>
