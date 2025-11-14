@@ -682,6 +682,27 @@ body {
     background-repeat: no-repeat;
     color: #ffffff;
 }
+.sub-surpresa-estarrecido {
+    background-image: url('../images/estarrecido.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-descrente {
+    background-image: url('../images/descrente.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-surpresa-desilusao {
+    background-image: url('../images/desilusao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
 
 
 

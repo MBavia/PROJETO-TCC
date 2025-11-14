@@ -179,7 +179,7 @@ const emotionsData = {
     "Medo": {
         label: "Medo",
         phrases: { titulo: "Medo, opa... algo te deixou apreensivo", subtitulo: "O que exatamente esse medo está te fazendo sentir?" },
-        sub: ["Horrorizado", "Inseguro", "Nervoso", "Assustado", "Aterrorizado", "Pânico (Sub)"] // "Pânico (Sub)" para evitar conflito
+        sub: ["Horrorizado", "Nervoso", "Inseguro", "Aterrorizado", "Assustado"]
     },
     "Horrorizado": {
         label: "Horrorizado",
@@ -206,11 +206,7 @@ const emotionsData = {
         phrases: { titulo: "Aterrorizado, isso parece muito intenso!", subtitulo: "O que esse terror faz você sentir agora?" },
         sub: ["Histeria", "Pânico"]
     },
-    "Pânico (Sub)": { // Chave ajustada
-        label: "Pânico",
-        phrases: { titulo: "Pânico, parece que tudo fugiu do controle...", subtitulo: "E como esse pânico está te impactando?" },
-        sub: ["Desespero (Sub2)", "Terror"] // "Desespero (Sub2)" para evitar conflito
-    },
+    
     // Emoções de Nível 3 (finais ou que não têm mais subníveis)
     "Agridido": { label: "Agridido", finalPhrase: "Você se sente agredido" },
     "Indignado": { label: "Indignado", finalPhrase: "Você está indignado" },
@@ -324,7 +320,15 @@ const emotionsData = {
     "Atônito": { label: "Atônito", finalPhrase: "Você se sente atônito"},
     "Impressionado": { label: "Impressionado", finalPhrase: "Você se sente impressionado"},
     "Sem palavras": { label: "Sem palavras", finalPhrase: "Você se sente sem palavras"},
-    "Tocado": { label: "Tocado", finalPhrase: "Você se sente tocado"}
+    "Tocado": { label: "Tocado", finalPhrase: "Você se sente tocado"},
+    "Agradecido": { label: "Agradecido", finalPhrase: "Você se sente agradecido"},
+    "Apaixonado": { label: "Apaixonado", finalPhrase: "Você se sente apaixonado"},
+    "Admirado": { label: "Admirado", finalPhrase: "Você se sente admirado"},
+    "Enamordecido": { label: "Enamordecido", finalPhrase: "Você se sente enamordecido"},
+    "Encantado": { label: "Encantado", finalPhrase: "Você se sente encantado"}
+    
+    
+    
 };
 
 // Referências aos elementos do DOM
