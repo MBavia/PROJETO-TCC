@@ -356,6 +356,9 @@ const emotionsData = {
     "Ciúmes": { label: "Ciúmes", finalPhrase: "Você sente ciúmes" },
     "Desespero": { label: "Desespero", finalPhrase: "Você sente desespero" },
     "Revoltado": { label: "Revoltado", finalPhrase: "Você se sente revoltado" },
+    "Depressão": { label: "Depressão", finalPhrase: "Você sente depressão" },
+    "Pesar": { label: "Pesar", finalPhrase: "Você sente pesar" },
+    "Consternado": { label: "Consternado", finalPhrase: "Você se sente consternado" },
 
     
     

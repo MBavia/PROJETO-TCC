@@ -912,7 +912,7 @@ body {
     color: #ffffff;
 }
 
-.sub-tristeza-tristezasub {
+.sub-tristeza-tristeza {
     background-image: url('../images/img5.png');
     background-size: cover;
     background-position: center;
@@ -945,7 +945,7 @@ body {
 }
 
 .sub-tristeza-desespero {
-    background-image: url('../images/Desespero.png');
+    background-image: url('../images/Desespero_tris.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1042,57 +1042,142 @@ body {
 }
 
 /* Sub-sub cards de 'Tristeza (Sub)' */
-.sub-tristezasub-solitario {
-    background-image: url('../images/solitario.png');
+.sub-tristezasub-depressao {
+    background-image: url('../images/depressao.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
 
-.sub-tristezasub-luto {
-    background-image: url('../images/Luto.png');
+.sub-tristezasub-pesar {
+    background-image: url('../images/pesar.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
 
-.sub.emotion-card.raiva-furioso {
-    background-image: url('../images/FURIOSO.png');
+/* --- NOVOS ESTILOS PARA RAIVA --- */
+
+/* Sub cards de 'Raiva' - Camada 2 */
+.sub-raiva-furioso {
+    background-image: url('../images/FURIOSO .png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.sub.emotion-card.raiva-irritado {
-    background-image: url('../images/IRRITADO.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-.sub.emotion-card.raiva-exasperado {
+.sub-raiva-exasperado {
     background-image: url('../images/EXASPERADO.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.sub.emotion-card.raiva-inveja {
-    background-image: url('../images/INVEJA.png');
+.sub-raiva-irritado {
+    background-image: url('../images/IRRITADO .png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.sub.emotion-card.raiva-desgosto {
+.sub-raiva-inveja {
+    background-image: url('../images/INVEJA .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-raiva-desgosto {
     background-image: url('../images/DESGOSTO.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
 }
+
+/* Sub-sub cards de 'Furioso' */
+.sub-furioso-odio {
+    background-image: url('../images/ÓDIO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-furioso-hostilidade {
+    background-image: url('../images/HOSTILIDADE .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Exasperado' */
+.sub-exasperado-agitacao {
+    background-image: url('../images/AGITAÇÃO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-exasperado-frustracao {
+    background-image: url('../images/FRUSTRAÇÃO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Irritado' */
+.sub-irritado-irritacao {
+    background-image: url('../images/IRRITAÇÃO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-irritado-provocacao {
+    background-image: url('../images/PROVOCAÇÃO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Inveja' */
+.sub-inveja-ressentido {
+    background-image: url('../images/RECENTIDO .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-inveja-ciumes {
+    background-image: url('../images/CIUMES .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sub-sub cards de 'Desgosto' */
+.sub-desgosto-desespero {
+    background-image: url('../images/DESESPERO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.sub-desgosto-revoltado {
+    background-image: url('../images/REVOLTADO.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* --- FIM DOS NOVOS ESTILOS PARA RAIVA --- */
 
 
 /* --- Botão de Voltar (Garantir estilo e posição) --- */
@@ -1336,4 +1421,4 @@ body {
     .main-title {
         font-size: 1.8rem;
     }
-} 
+}
