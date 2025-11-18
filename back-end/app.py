@@ -105,6 +105,9 @@ def get_user_chat(terapeuta_id='tcc'):
 def index():
     return render_template('opt-inicial.html')
 
+
+
+
 # ROTA ANTIGA QUE NÃO SERÁ MAIS USADA, MANTIDA COMO FINAL_PAGE:
 @app.route('/final_page_antiga')
 def final_page_antiga():

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações - TerapIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 min-h-screen font-sans">
+
+    <!-- Container principal para alinhar todo o conteúdo -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Link de "Voltar" agora está separado para alinhar à esquerda -->
+        <div class="mb-8">
+            <a href="{{ url_for('index') }}" class="text-blue-600 hover:underline font-medium">&lt; Voltar ao Início</a>
+        </div>
+
+        <!-- O header agora contém apenas os títulos centralizados -->
+        <header class="mb-12 text-center">
+            <h1
+                class="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                Recomendações para Você
+            </h1>
+            <p
+                class="text-lg mt-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                Com base no que você compartilhou, aqui estão alguns vídeos que podem ajudar.
+            </p>
+        </header>
+
+        <main>
+            {% if videos %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for video in videos %}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 flex flex-col">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="{{ video.url }}" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <div class="p-4 flex-grow">
+                        <h3 class="font-semibold text-lg text-gray-900">{{ video.titulo }}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="text-center text-gray-500 mt-16">
+                <p class="text-xl">Não foi possível encontrar recomendações de vídeo no momento.</p>
+                <p class="mt-2">Isso pode acontecer se a API do YouTube não estiver configurada ou se não houver vídeos
+                    relevantes.</p>
+            </div>
+            {% endif %}
+        </main>
+
+    </div>
+
+</body>
+
+</html>
