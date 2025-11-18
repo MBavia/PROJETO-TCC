@@ -33,7 +33,7 @@ const emotionsData = {
     "Tristeza": {
         label: "Tristeza",
         phrases: { titulo: "Tristeza, que pena!", subtitulo: "O que essa tristeza está te fazendo sentir?" },
-        sub: ["Sofrimento", "Tristeza (Sub)", "Desapontamento", "Vergonha", "Negligência", "Desespero", "Culpa", "Isolamento", "Luto", "Impotência"]
+        sub: ["Sofrimento", "Tristezasub", "Desapontamento", "Vergonha", "Negligência", "Desespero", "Culpa", "Isolamento", "Luto", "Impotência"]
     },
     "Sofrimento": {
         label: "Sofrimento",
@@ -65,7 +65,7 @@ const emotionsData = {
         phrases: { titulo: "Desapontamento, poxa... que pena.", subtitulo: "E como esse desapontamento faz você se sentir agora?" },
         sub: ["Costernado", "Desagradado"]
     },
-    "Tristeza (Sub)": {
+    "Tristezasub": {
         label: "Tristeza",
         phrases: { titulo: "Tristeza, que sensação difícil...", subtitulo: "O que essa tristeza está te fazendo sentir agora?" },
         sub: ["Depressão", "Pesar"]
@@ -359,6 +359,8 @@ const emotionsData = {
     "Depressão": { label: "Depressão", finalPhrase: "Você sente depressão" },
     "Pesar": { label: "Pesar", finalPhrase: "Você sente pesar" },
     "Consternado": { label: "Consternado", finalPhrase: "Você se sente consternado" },
+    "Tristezasub": { label: "Tristeza", finalPhrase: "Você se sente tristeza" },
+
 
     
     
