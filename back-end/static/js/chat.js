@@ -84,8 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
             terapeutaAvatar.src = `/static/images/${data.avatar}`;
             terapeutaAvatarHeader.src = `/static/images/${data.avatar}`;
 
+            // ESSAS DUAS LINHAS HABILITAM O BOTÃO E O INPUT:
             messageInput.disabled = false;
             sendButton.disabled = false;
+            
             messageInput.placeholder = `Converse com ${data.nome}...`;
             addMessageToChat('status', 'Conexão estabelecida.');
         });
@@ -113,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para enviar mensagem
     function enviarMensagem() {
         const messageText = messageInput.value.trim();
-        if (messageText === '' || !socket || !socket.connected) return;
+        // Garante que só envia se houver texto, socket e se não estiver desabilitado
+        if (messageText === '' || !socket || !socket.connected || sendButton.disabled) return; 
 
         addMessageToChat('user', messageText);
         // Envia a mensagem E o ID do terapeuta para o backend
@@ -124,19 +127,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. INICIALIZAÇÃO E EVENTOS ---
 
-    // Desativa o input no início
-    messageInput.disabled = true;
-    sendButton.disabled = true;
+    // Desativa o input no início (o HTML já faz isso, mas garante aqui)
+    if (messageInput) messageInput.disabled = true;
+    if (sendButton) sendButton.disabled = true;
 
     // Inicia a conexão assim que a página carrega
     iniciarSessao();
 
     // Adiciona os listeners para o botão de enviar e a tecla Enter
-    sendButton.addEventListener('click', enviarMensagem);
-    messageInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            enviarMensagem();
-        }
-    });
+    if (sendButton) {
+        sendButton.addEventListener('click', enviarMensagem);
+    }
+    
+    if (messageInput) {
+        messageInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                enviarMensagem();
+            }
+        });
+    }
 });

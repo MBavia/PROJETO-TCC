@@ -8,11 +8,8 @@
 </head>
 
 <body>
-    <a href="#" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
-        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-        <span class="back-text">Voltar</span>
+    <a href="{{ url_for('index') }}" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
+    <span class="back-text">Voltar</span>
     </a>
 
     <div class="container">

@@ -13,13 +13,12 @@
 </head>
 
 <body class="bg-white">
-    <a href="#" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
-        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-        <span class="back-text">Voltar</span>
+    <a href="{{ url_for('questionario') }}" onclick="history.back(); return false;" class="back-button" title="Voltar à página anterior">
+    <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+    <span class="back-text">Voltar</span>
     </a>
-    
     <main class="w-full p-8 flex flex-col items-center">
         
         <div class="mb-5 w-full text-left max-w-4xl"> 
