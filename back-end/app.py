@@ -135,6 +135,11 @@ def final_ia():
     # Rota chamada ao concluir o questionário: exibe opções finais (IA)
     return render_template('opt_final.html')
 
+@app.route('/recomendacoes')
+def recomendacoes():
+    # CORREÇÃO: Passamos 'videos=[]' para evitar o erro de TemplateSyntaxError no recomendacoes.html
+    return render_template('recomendacoes.html', videos=[])
+
 
 # --- Lógica do Socket.IO (sem alterações) ---
 @socketio.on('connect')

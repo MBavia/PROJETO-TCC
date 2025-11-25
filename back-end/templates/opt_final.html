@@ -29,12 +29,21 @@
             </p>
         </div>
 
-        <div class="flex justify-center w-full mt-10">
+        <div class="flex justify-center w-full mt-10 space-x-8">
             <a href="{{ url_for('selecao') }}"
                 class="card-ia-style rounded-xl cursor-pointer relative overflow-hidden">
                 <div class="card-icon">
                     <img src="{{ url_for('static', filename='images/IA.png') }}" alt="IA Icon" class="card-icon-img" />
                 </div>
+                
+            </a>
+
+            <a href="{{ url_for('recomendacoes') }}"
+                class="card-ia-style card-recommendation-style rounded-xl cursor-pointer relative overflow-hidden">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/recomendaçoes.jpg') }}" alt="Recomendações Icon" class="card-icon-img" />
+                </div>
+                 <p class="card-label">Recomendações</p>
             </a>
         </div>
     </main>
